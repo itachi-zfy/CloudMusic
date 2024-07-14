@@ -1,5 +1,8 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>Src/qml/leftPage/LeftPage.qml</file>
+        <file>Src/qml/basic/BasicConfig.qml</file>
+        <file>Src/qml/basic/qmldir</file>
     </qresource>
 </RCC>
