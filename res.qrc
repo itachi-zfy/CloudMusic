@@ -1,5 +1,16 @@
 <RCC>
     <qresource prefix="/">
         <file>Resources/title/logo.png</file>
+        <file>Resources/title/arrow.png</file>
+        <file>Resources/title/close.png</file>
+        <file>Resources/title/hot.png</file>
+        <file>Resources/title/message.png</file>
+        <file>Resources/title/mini.png</file>
+        <file>Resources/title/record.png</file>
+        <file>Resources/title/search.png</file>
+        <file>Resources/title/setting.png</file>
+        <file>Resources/title/skin.png</file>
+        <file>Resources/title/user.png</file>
+        <file>Resources/title/vip.png</file>
     </qresource>
 </RCC>

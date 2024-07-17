@@ -4,5 +4,7 @@
         <file>Src/qml/leftPage/LeftPage.qml</file>
         <file>Src/qml/basic/BasicConfig.qml</file>
         <file>Src/qml/basic/qmldir</file>
+        <file>Src/qml/rightPage/RightPage.qml</file>
+        <file>Src/qml/rightPage/TopTitle.qml</file>
     </qresource>
 </RCC>

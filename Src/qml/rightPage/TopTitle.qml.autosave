@@ -1,0 +1,49 @@
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtGraphicalEffects 1.15
+import "../basic"
+Item {
+    Row{
+        spacing: 8
+        anchors.verticalCenter: parent.verticalCenter
+        //页面回退到上一步
+        Rectangle{
+            id:backForwardRect
+            width: 36 * BasicConfig.wScale
+            height: 42 * BasicConfig.hScale
+            radius: 4 * BasicConfig.wScale
+            color: "transparent"
+            border.color: BasicConfig.bordColor
+            border.width: 1
+            property bool effectEnabled: false
+            Image{
+                scale: BasicConfig.wScale
+                anchors.centerIn: parent
+                source: "/Resources/title/arrow.png"
+                layer.effect: true
+                ColorOverlay{
+                    enabled: parent.parent.effectEnabled
+                    source: parent
+                    color: "white"
+                }
+            }
+            MouseArea{
+                anchors.fill: parent
+                hoverEnabled: true
+                onExited: {
+                    backForwardRect.effectEnabled = false
+                }
+                onEntered: {
+                    backForwardRect.effectEnabled = true
+                }
+                onClicked:{
+                    console.log("页面返回上一级")
+                }
+            }
+        }
+        TextField{
+        
+        }
+        PathText{}
+    }
+}

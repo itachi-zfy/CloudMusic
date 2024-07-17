@@ -1,5 +1,4 @@
 import QtQuick 2.15
-import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 import "../basic"
 Rectangle{
@@ -18,9 +17,10 @@ Rectangle{
             }
             Label{
                 color:"white"
-                text: "网易云音乐"
                 font.bold: true
+                text: "网易云音乐"
                 font.pixelSize: 26
+                font.family: BasicConfig.commFont
                 anchors.verticalCenter: parent.verticalCenter
             }
         }
