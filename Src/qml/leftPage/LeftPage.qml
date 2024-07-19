@@ -2,8 +2,6 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import "../basic"
 Rectangle{
-    color:BasicConfig.leftBgColor
-    width: parent.width * BasicConfig.leftWScale
     Item{
         width: 255
         height: 80

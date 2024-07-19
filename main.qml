@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import "./Src/qml/basic"
 import "./Src/qml/leftPage"
+import "./Src/qml/rightPage"
 Window {
     id:window
     width: 1317
@@ -11,9 +12,18 @@ Window {
     color: BasicConfig.mainBgColor
     flags: Qt.FramelessWindowHint // 设置无边框属性
     LeftPage{
+        id:leftPage
         anchors.left: parent.left
         anchors.top:parent.top
         anchors.bottom: parent.bottom
+        color:BasicConfig.leftBgColor
+        width: parent.width * BasicConfig.leftWScale
+    }
+    TopTitle{
+        anchors.left: leftPage.right
+        anchors.right: parent.right
+        anchors.top: parent.top
+        height: 80 * BasicConfig.hScale
     }
     //设置窗体可拖动
     MouseArea {
