@@ -11,7 +11,7 @@ Window {
     title: qsTr("CloudMusic")
     color: BasicConfig.mainBgColor
     flags: Qt.FramelessWindowHint // 设置无边框属性
-    //设置窗体可拖动
+    //设置窗体可拖动,此层级必须在最顶层
     MouseArea {
         id: dragRegion
         anchors.fill: parent
