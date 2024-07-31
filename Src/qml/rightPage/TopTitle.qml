@@ -58,7 +58,7 @@ Item {
             id:searchTextField
             z:window.z + 1
             height: backForwardItem.height
-            width: 250 * BasicConfig.wScale
+            width: 240 * BasicConfig.wScale
             leftPadding:40 * BasicConfig.wScale
             color:"white"
             placeholderText:"晴天"
@@ -149,20 +149,25 @@ Item {
         }
     }
 
+    //用户与基础设置
     Row{
         id:othersRow
-        spacing: 10
+        spacing: 5 * BasicConfig.wScale
         anchors.verticalCenter: searchRow.verticalCenter
         anchors.left: searchRow.right
-        anchors.leftMargin: 100
+        anchors.leftMargin: 60 * BasicConfig.wScale
         //登录与会员
         Item{
             id:userItem
+            width: 140 * BasicConfig.wScale
+            height: 30 * BasicConfig.wScale
+            anchors.verticalCenter: parent.verticalCenter
             Row{
                 anchors.verticalCenter: parent.verticalCenter
+                spacing: 8 * BasicConfig.wScale
                 Rectangle{
                     id:userIconRect
-                    width: 30 * BasicConfig.wScale
+                    width: 25 * BasicConfig.wScale
                     height: width
                     radius: width/2
                     color: BasicConfig.commGray
@@ -172,7 +177,227 @@ Item {
                         anchors.centerIn:parent
                     }
                 }
+                Text{
+                    id:loadStateText
+                    text: "未登录"
+                    color:"white"
+                    font.pixelSize: 14 * BasicConfig.wScale
+                    font.family: BasicConfig.commFont
+                    anchors.verticalCenter: userIconRect.verticalCenter
+                }
+                Item{
+                    id:vipItem
+                    height: userIconRect.height
+                    width: loadStateText.implicitWidth * 1.2
+                    anchors.verticalCenter: parent.verticalCenter
+                    Rectangle{
+                        id:vipRect
+                        radius: 8 * BasicConfig.wScale
+                        width: parent.width - vipRect.radius
+                        height:14 * BasicConfig.wScale
+                        color: "#dadada"
+                        anchors.left: parent.left
+                        anchors.verticalCenter: parent.verticalCenter
+                        Label{
+                            text: "VIP开通"
+                            anchors.left: parent.left
+                            anchors.leftMargin: parent.radius + 4
+                            color:"#f8f9f9"
+                            font.pixelSize: parent.height/2
+                            font.family: BasicConfig.commFont
+                            anchors.verticalCenter: parent.verticalCenter
+                        }
+                    }
+                    //背景色边框矩形
+                    Rectangle{
+                        id:bgBordRect
+                        width: vipRect.height + 4
+                        height: width
+                        radius: width/2
+                        color: BasicConfig.mainBgColor
+                        anchors.verticalCenter: parent.verticalCenter
+                        Rectangle{
+                            id:r1
+                            anchors.fill: parent
+                            anchors.margins: 1
+                            radius: width/2
+                            color: "#dadada"
+                            anchors.centerIn: parent
+                            Rectangle{
+                                id:r2
+                                anchors.fill: parent
+                                anchors.margins: 4 * BasicConfig.wScale
+                                radius: width/2
+                                color: "#cecece"
+                                anchors.centerIn: parent
+                            }
+                        }
+                    }
+                }
             }
+        }
+        //登录下拉
+        Image{
+            id:loginImg
+            anchors.verticalCenter: parent.verticalCenter
+            source: "/Resources/title/arrow.png"
+            rotation: -90
+            layer.enabled: true
+            layer.effect: ColorOverlay{
+                source: loginImg
+                color: "white"
+            }
+            MouseArea{
+                anchors.fill: parent
+                hoverEnabled: true
+                onExited: {
+                    parent.layer.enabled = false
+                }
+                onEntered: {
+                    parent.layer.enabled = true
+                }
+                onClicked: {
+
+                }
+            }
+        }
+
+        //消息中心
+        Image{
+            id:messageImg
+            anchors.verticalCenter: parent.verticalCenter
+            source: "/Resources/title/message.png"
+            layer.enabled: true
+            scale: 0.7
+            layer.effect: ColorOverlay{
+                source: messageImg
+                color: "white"
+            }
+            MouseArea{
+                anchors.fill: parent
+                hoverEnabled: true
+                onExited: {
+                    parent.layer.enabled = false
+                }
+                onEntered: {
+                    parent.layer.enabled = true
+                }
+                onClicked: {
+
+                }
+            }
+        }
+        //设置
+        Image{
+            id:settingImg
+            anchors.verticalCenter: parent.verticalCenter
+            source: "/Resources/title/setting.png"
+            layer.enabled: true
+            scale: 0.7
+            layer.effect: ColorOverlay{
+                source: settingImg
+                color: "white"
+            }
+            MouseArea{
+                anchors.fill: parent
+                hoverEnabled: true
+                onExited: {
+                    parent.layer.enabled = false
+                }
+                onEntered: {
+                    parent.layer.enabled = true
+                }
+                onClicked: {
+
+                }
+            }
+        }
+        //换肤
+        Image{
+            id:skinImg
+            anchors.verticalCenter: parent.verticalCenter
+            source: "/Resources/title/skin.png"
+            layer.enabled: true
+            scale: 0.7
+            layer.effect: ColorOverlay{
+                source: skinImg
+                color: "white"
+            }
+            MouseArea{
+                anchors.fill: parent
+                hoverEnabled: true
+                onExited: {
+                    parent.layer.enabled = false
+                }
+                onEntered: {
+                    parent.layer.enabled = true
+                }
+                onClicked: {
+
+                }
+            }
+        }
+        Rectangle{
+            height: 24 * BasicConfig.hScale
+            width: 1
+            color:BasicConfig.commGray
+            anchors.verticalCenter: parent.verticalCenter
+        }
+    }
+
+    //最小化
+    Row{
+        id:miniRow
+        spacing: 15 * BasicConfig.wScale
+        anchors.verticalCenter: othersRow.verticalCenter
+        anchors.left: othersRow.right
+        anchors.leftMargin: 5 * BasicConfig.wScale
+        //MINI
+        Image{
+            id:miniImg
+            anchors.verticalCenter: parent.verticalCenter
+            source: "/Resources/title/mini.png"
+            layer.enabled: false
+            property bool effectEnabled : false
+            layer.effect: ColorOverlay{
+                source: miniImg
+                color: "white"
+            }
+            MouseArea{
+                anchors.fill: parent
+                hoverEnabled: true
+                onExited: {
+                    parent.layer.enabled = false
+                }
+                onEntered: {
+                    parent.layer.enabled = true
+                }
+                onClicked: {
+
+                }
+            }
+        }
+        //最小化
+        Rectangle{
+            height: 2
+            width: 20
+            color:BasicConfig.commGray
+            anchors.verticalCenter: parent.verticalCenter
+        }
+        //最大化
+        Rectangle{
+            width: 20
+            height: width
+            radius: 2
+            color:BasicConfig.commGray
+            anchors.verticalCenter: parent.verticalCenter
+        }
+        //关闭
+        Label{
+            text: "X"
+            font.pixelSize: 20
+            color:BasicConfig.commGray
+            anchors.verticalCenter: parent.verticalCenter
         }
     }
 }
