@@ -10,8 +10,8 @@ Window {
     visible: true
     title: qsTr("CloudMusic")
     color: BasicConfig.mainBgColor
-    flags: Qt.FramelessWindowHint // 设置无边框属性
-    //设置窗体可拖动
+    flags: Qt.FramelessWindowHint | Qt.Window | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint | Qt.WindowMinimizeButtonHint// 设置无边框属性
+    //设置窗体可拖动,此层级必须在最顶层
     MouseArea {
         id: dragRegion
         anchors.fill: parent
@@ -27,12 +27,13 @@ Window {
         }
     }
     LeftPage{
-        id:leftPage
+        id:leftPage   
+        width: 255
         anchors.left: parent.left
         anchors.top:parent.top
         anchors.bottom: parent.bottom
         color:BasicConfig.leftBgColor
-        width: parent.width * BasicConfig.leftWScale
+        // width: parent.width * BasicConfig.leftWScale
     }
     TopTitle{
         anchors.left: leftPage.right
