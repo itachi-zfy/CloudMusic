@@ -31,10 +31,12 @@ Window {
         }
         onClicked: blankAreaClicked()
     }
+    //扫码登录弹窗
     LoginPopup{
         id:loginPopup
         anchors.centerIn: parent
     }
+    //左边页面
     LeftPage{
         id:leftPage   
         width: 255

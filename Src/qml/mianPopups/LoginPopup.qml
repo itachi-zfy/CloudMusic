@@ -59,53 +59,87 @@ Popup{
         Image{
             id:qrcode
             x:50
-            y:40
+            y:30
             scale: 0.25
             source: "/Resources/mianPopups/qrcode.jpg"
+            MouseArea{
+                anchors.fill: parent
+                hoverEnabled: true
+                onEntered: {
+                    showAnimation.showFlag = true
+                    showAnimation.start()
+                }
+                onExited: {
+                    showAnimation.showFlag = false
+                    showAnimation.start()
+                }
+            }
         }
+        Label{
+            visible: qrcode.scale === 0.25 ||  qrcode.scale === 0.35
+            anchors.top: qrcode.bottom
+            anchors.topMargin:showAnimation.showFlag? -210:-190
+            anchors.horizontalCenter: qrcode.horizontalCenter
+            textFormat: Text.RichText
+            text: "<span style=\"font-size: 20px;color: #75777f;font-family:'微软雅黑 Light';\">使用</span>
+                    <a href=\"https://www.baidu.com\" style=\"text-decoration: none;\">
+                        <span style=\"font-size: 20px;color: cornflowerblue;font-family:'微软雅黑 Light';cursor:pointer;\">网易云音乐APP</span>
+                    </a>
+                    <span style=\"font-size: 20px;color: #75777f;font-family:'微软雅黑 Light';\">扫码登录</span>"
+            width: showAnimation.showFlag?200:300
+            wrapMode: Text.WrapAnywhere
+            horizontalAlignment: Text.AlignHCenter
+            MouseArea{
+                anchors.fill: parent
+                onClicked: {
+                    // Qt.openUrlExternally("https://www.baidu.com")
+                }
+            }
+        }
+
 
         ParallelAnimation{
             id:showAnimation
-
+            property bool showFlag: true
             NumberAnimation {
                 target: pic
                 property: "x"
                 duration: 500
-                from: (popRoot.width-pic.implicitWidth)/2
-                to:30
-                // easing.type: Easing.InOutQuad
+                from: showAnimation.showFlag?(popRoot.width-pic.implicitWidth)/2:30
+                to:showAnimation.showFlag?30:(popRoot.width-pic.implicitWidth)/2
+                easing.type: Easing.Linear
             }
             NumberAnimation {
                 target: pic
                 property: "opacity"
                 duration: 500
-                from: 0
-                to:1
-                // easing.type: Easing.InOutQuad
+                from: !showAnimation.showFlag
+                to:showAnimation.showFlag
+                easing.type: Easing.Linear
             }
             NumberAnimation {
                 target: qrcode
                 property: "x"
                 duration: 500
-                from: (popRoot.width-qrcode.implicitWidth)/2*qrcode.scale
-                to:40
-                // easing.type: Easing.InOutQuad
+                from: showAnimation.showFlag?(popRoot.width-qrcode.implicitWidth*1.8)/2*qrcode.scale:40
+                to:showAnimation.showFlag?40:(popRoot.width-qrcode.implicitWidth*1.8)/2*qrcode.scale
+                easing.type: Easing.Linear
             }
             NumberAnimation {
                 target: qrcode
                 property: "y"
                 duration: 500
-                from: (popRoot.width-qrcode.implicitHeight)/2*qrcode.scale
-                to:30
-                // easing.type: Easing.InOutQuad
+                from: showAnimation.showFlag?(popRoot.height-qrcode.implicitHeight):30
+                to:showAnimation.showFlag?-30:(popRoot.height-qrcode.implicitHeight)/5
+                easing.type: Easing.Linear
             }
             NumberAnimation {
                 target: qrcode
                 property: "scale"
                 duration: 500
-                from: 0.35
-                to:0.25
-                // easing.type: Easing.InOutQuad
+                from:showAnimation.showFlag? 0.35:0.25
+                to:showAnimation.showFlag?0.25:0.35
+                easing.type: Easing.Linear
             }
         }
     }
