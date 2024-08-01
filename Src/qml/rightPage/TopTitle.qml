@@ -3,6 +3,14 @@ import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
 import "../basic"
 Item {
+    //点击空白区域搜索框失焦
+    Connections{
+        target: window
+        function onBlankAreaClicked(){
+            searchTextField.focus = false
+        }
+    }
+
     //搜索 searchRow
     Row{
         id:searchRow
@@ -107,10 +115,10 @@ Item {
                         searchBox.gradientStopPos = 0
                         mouse.accepted = false
                     }
-                    onFocusChanged: {
-                        if(!focus)searchBox.gradientStopPos = 1
-                    }
                 }
+            }
+            onFocusChanged: {
+                if(!focus)searchBox.gradientStopPos = 1
             }
             //TODO 弹出一个Popup
         }
@@ -162,6 +170,7 @@ Item {
             width: 140 * BasicConfig.wScale
             height: 30 * BasicConfig.wScale
             anchors.verticalCenter: parent.verticalCenter
+
             Row{
                 anchors.verticalCenter: parent.verticalCenter
                 spacing: 8 * BasicConfig.wScale
@@ -176,14 +185,33 @@ Item {
                         source: "/Resources/title/user.png"
                         anchors.centerIn:parent
                     }
+                    MouseArea{
+                        anchors.fill: parent
+                        onClicked: {
+                            window.openLoginPopup()
+                        }
+                    }
                 }
                 Text{
                     id:loadStateText
                     text: "未登录"
-                    color:"white"
+                    color:"#75777f"
                     font.pixelSize: 14 * BasicConfig.wScale
                     font.family: BasicConfig.commFont
                     anchors.verticalCenter: userIconRect.verticalCenter
+                    MouseArea{
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        onExited: {
+                            parent.color = "#75777f"
+                        }
+                        onEntered: {
+                            parent.color = "white"
+                        }
+                        onClicked: {
+                            window.openLoginPopup()
+                        }
+                    }
                 }
                 Item{
                     id:vipItem
@@ -233,6 +261,12 @@ Item {
                             }
                         }
                     }
+                    MouseArea{
+                        anchors.fill: parent
+                        onClicked: {
+                            window.openLoginPopup()
+                        }
+                    }
                 }
             }
         }
@@ -242,7 +276,7 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             source: "/Resources/title/arrow.png"
             rotation: -90
-            layer.enabled: true
+            layer.enabled: false
             layer.effect: ColorOverlay{
                 source: loginImg
                 color: "white"
@@ -257,7 +291,7 @@ Item {
                     parent.layer.enabled = true
                 }
                 onClicked: {
-
+                    window.openLoginPopup()
                 }
             }
         }
@@ -267,7 +301,7 @@ Item {
             id:messageImg
             anchors.verticalCenter: parent.verticalCenter
             source: "/Resources/title/message.png"
-            layer.enabled: true
+            layer.enabled: false
             scale: 0.7
             layer.effect: ColorOverlay{
                 source: messageImg
@@ -292,7 +326,7 @@ Item {
             id:settingImg
             anchors.verticalCenter: parent.verticalCenter
             source: "/Resources/title/setting.png"
-            layer.enabled: true
+            layer.enabled: false
             scale: 0.7
             layer.effect: ColorOverlay{
                 source: settingImg
@@ -317,7 +351,7 @@ Item {
             id:skinImg
             anchors.verticalCenter: parent.verticalCenter
             source: "/Resources/title/skin.png"
-            layer.enabled: true
+            layer.enabled: false
             scale: 0.7
             layer.effect: ColorOverlay{
                 source: skinImg
@@ -351,7 +385,7 @@ Item {
         spacing: 15 * BasicConfig.wScale
         anchors.verticalCenter: othersRow.verticalCenter
         anchors.right: parent.right
-        anchors.rightMargin: 50 * BasicConfig.wScale
+        anchors.rightMargin: 0.02 * window.width * BasicConfig.wScale//   50/2560 ≈ 0.02
         //MINI
         Image{
             id:miniImg
@@ -377,19 +411,25 @@ Item {
             }
         }
         //最小化
-        Rectangle{
-            height: 2
-            width: 20
-            color:"#75777f"
+        Item{
+            width: miniImg.implicitWidth
+            height: miniImg.implicitHeight
             anchors.verticalCenter: parent.verticalCenter
+            Rectangle{
+                id:minRect
+                height: 2
+                width: 20
+                color:"#75777f"
+                anchors.centerIn: parent
+            }
             MouseArea{
                 anchors.fill: parent
                 hoverEnabled: true
                 onEntered: {
-                    parent.color = "white"
+                    minRect.color = "white"
                 }
                 onExited: {
-                    parent.color = "#75777f"
+                    minRect.color = "#75777f"
                 }
                 onClicked: {
                     console.log("最小化")

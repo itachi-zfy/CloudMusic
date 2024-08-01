@@ -12,5 +12,7 @@
         <file>Resources/title/skin.png</file>
         <file>Resources/title/user.png</file>
         <file>Resources/title/vip.png</file>
+        <file>Resources/mianPopups/ele_001.png</file>
+        <file>Resources/mianPopups/qrcode.jpg</file>
     </qresource>
 </RCC>

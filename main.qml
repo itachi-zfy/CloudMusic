@@ -3,6 +3,7 @@ import QtQuick.Window 2.12
 import "./Src/qml/basic"
 import "./Src/qml/leftPage"
 import "./Src/qml/rightPage"
+import "./Src/qml/mianPopups"
 Window {
     id:window
     width: 1317
@@ -10,7 +11,10 @@ Window {
     visible: true
     title: qsTr("CloudMusic")
     color: BasicConfig.mainBgColor
-    flags: Qt.FramelessWindowHint | Qt.Window | Qt.WindowSystemMenuHint | Qt.WindowMaximizeButtonHint | Qt.WindowMinimizeButtonHint// 设置无边框属性
+    flags: Qt.FramelessWindowHint | Qt.Window | Qt.WindowSystemMenuHint |
+           Qt.WindowMaximizeButtonHint | Qt.WindowMinimizeButtonHint            // 设置无边框属性
+    signal blankAreaClicked() //空白区域被点击了
+    function openLoginPopup(){loginPopup.open()}
     //设置窗体可拖动,此层级必须在最顶层
     MouseArea {
         id: dragRegion
@@ -25,6 +29,11 @@ Window {
             window.x += delta.x
             window.y += delta.y
         }
+        onClicked: blankAreaClicked()
+    }
+    LoginPopup{
+        id:loginPopup
+        anchors.centerIn: parent
     }
     LeftPage{
         id:leftPage   
@@ -33,7 +42,6 @@ Window {
         anchors.top:parent.top
         anchors.bottom: parent.bottom
         color:BasicConfig.leftBgColor
-        // width: parent.width * BasicConfig.leftWScale
     }
     TopTitle{
         anchors.left: leftPage.right

@@ -6,5 +6,6 @@
         <file>Src/qml/basic/qmldir</file>
         <file>Src/qml/rightPage/RightPage.qml</file>
         <file>Src/qml/rightPage/TopTitle.qml</file>
+        <file>Src/qml/mianPopups/LoginPopup.qml</file>
     </qresource>
 </RCC>

@@ -16,7 +16,7 @@ Rectangle{
             Label{
                 color:"white"
                 font.bold: true
-                text: "网易云音乐"
+                text: "周易云音乐"
                 font.pixelSize: 26
                 font.family: BasicConfig.commFont
                 anchors.verticalCenter: parent.verticalCenter

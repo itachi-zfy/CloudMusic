@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Src/js/MainEvents.js</file>
+    </qresource>
+</RCC>
