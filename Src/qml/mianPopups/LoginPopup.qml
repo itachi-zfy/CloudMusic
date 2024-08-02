@@ -1,3 +1,15 @@
+/***************************************************************
+
+*  @ProjName:   %{CurrentProject:MyCloudMusic}
+*  @FileName:   LoginPopup.qml
+*  @Author:     zfy1362021@163.com
+*  @Date:       2024-08-02
+*  @Brief:      扫码登录界面
+*
+*---------------------------------------------------------------
+*  ||擅长C++/Qt/Qml/Map/OpenGL/WebGis PC/Andriod端应用程序开发，
+*  ||复杂仿真程序开发 (学习交流加群：492954738)
+****************************************************************/
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
@@ -6,6 +18,7 @@ Popup{
     id:popRoot
     width: 466
     height: 638
+    clip:true
     closePolicy:Popup.NoAutoClose           //不允许自动关闭
     onOpened:showAnimation.start()
     background: Rectangle{
@@ -59,26 +72,30 @@ Popup{
         Image{
             id:qrcode
             x:50
-            y:30
-            scale: 0.25
+            y:0
+            scale: 0.2
             source: "/Resources/mianPopups/qrcode.jpg"
             MouseArea{
                 anchors.fill: parent
                 hoverEnabled: true
                 onEntered: {
                     showAnimation.showFlag = true
-                    showAnimation.start()
+                    if(qrcode.scale === 0.2 ||  qrcode.scale === 0.3){//不中断动画
+                        showAnimation.start()
+                    }
                 }
                 onExited: {
                     showAnimation.showFlag = false
-                    showAnimation.start()
+                    if(qrcode.scale === 0.2 ||  qrcode.scale === 0.3){//不中断动画
+                        showAnimation.start()
+                    }
                 }
             }
         }
         Label{
-            visible: qrcode.scale === 0.25 ||  qrcode.scale === 0.35
+            visible: qrcode.scale === 0.2 ||  qrcode.scale === 0.3
             anchors.top: qrcode.bottom
-            anchors.topMargin:showAnimation.showFlag? -210:-190
+            anchors.topMargin:showAnimation.showFlag? -320:-290
             anchors.horizontalCenter: qrcode.horizontalCenter
             textFormat: Text.RichText
             text: "<span style=\"font-size: 20px;color: #75777f;font-family:'微软雅黑 Light';\">使用</span>
@@ -86,18 +103,52 @@ Popup{
                         <span style=\"font-size: 20px;color: cornflowerblue;font-family:'微软雅黑 Light';cursor:pointer;\">网易云音乐APP</span>
                     </a>
                     <span style=\"font-size: 20px;color: #75777f;font-family:'微软雅黑 Light';\">扫码登录</span>"
-            width: showAnimation.showFlag?200:300
+            width: qrcode.scale === 0.2?200:300
             wrapMode: Text.WrapAnywhere
             horizontalAlignment: Text.AlignHCenter
             MouseArea{
-                anchors.fill: parent
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.leftMargin: 40
+                anchors.rightMargin: 80
+                hoverEnabled: true
+                onEntered: {
+                    cursorShape = Qt.PointingHandCursor
+                }
+                onExited: {
+                    cursorShape = Qt.ArrowCursor
+                }
                 onClicked: {
                     // Qt.openUrlExternally("https://www.baidu.com")
                 }
             }
         }
 
-
+        Label{
+            color: "#75777f"
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 50
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: "选择其他登录方式 >"
+            font.pixelSize: 20
+            MouseArea{
+                anchors.fill: parent
+                hoverEnabled: true
+                onEntered: {
+                    cursorShape = Qt.PointingHandCursor
+                }
+                onExited: {
+                    cursorShape = Qt.ArrowCursor
+                }
+                onClicked: {
+                    // Qt.openUrlExternally("https://www.baidu.com")
+                    window.openLoginByOtherMeansPopup()
+                    window.closeLoginPopup()
+                }
+            }
+        }
         ParallelAnimation{
             id:showAnimation
             property bool showFlag: true
@@ -105,8 +156,8 @@ Popup{
                 target: pic
                 property: "x"
                 duration: 500
-                from: showAnimation.showFlag?(popRoot.width-pic.implicitWidth)/2:30
-                to:showAnimation.showFlag?30:(popRoot.width-pic.implicitWidth)/2
+                from: showAnimation.showFlag?(popRoot.width-pic.implicitWidth)/2:10
+                to:showAnimation.showFlag?10:(popRoot.width-pic.implicitWidth)/2
                 easing.type: Easing.Linear
             }
             NumberAnimation {
@@ -121,24 +172,24 @@ Popup{
                 target: qrcode
                 property: "x"
                 duration: 500
-                from: showAnimation.showFlag?(popRoot.width-qrcode.implicitWidth*1.8)/2*qrcode.scale:40
-                to:showAnimation.showFlag?40:(popRoot.width-qrcode.implicitWidth*1.8)/2*qrcode.scale
+                from: showAnimation.showFlag?(popRoot.width-qrcode.implicitWidth)/2:-60
+                to:showAnimation.showFlag?-60:(popRoot.width-qrcode.implicitWidth)/2
                 easing.type: Easing.Linear
             }
             NumberAnimation {
                 target: qrcode
                 property: "y"
                 duration: 500
-                from: showAnimation.showFlag?(popRoot.height-qrcode.implicitHeight):30
-                to:showAnimation.showFlag?-30:(popRoot.height-qrcode.implicitHeight)/5
+                from: showAnimation.showFlag?(popRoot.height-qrcode.implicitHeight)/2:-130
+                to:showAnimation.showFlag?-130:(popRoot.height-qrcode.implicitHeight)/2
                 easing.type: Easing.Linear
             }
             NumberAnimation {
                 target: qrcode
                 property: "scale"
                 duration: 500
-                from:showAnimation.showFlag? 0.35:0.25
-                to:showAnimation.showFlag?0.25:0.35
+                from:showAnimation.showFlag? 0.3:0.2
+                to:showAnimation.showFlag?0.2:0.3
                 easing.type: Easing.Linear
             }
         }

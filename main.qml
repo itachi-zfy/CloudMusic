@@ -12,9 +12,12 @@ Window {
     title: qsTr("CloudMusic")
     color: BasicConfig.mainBgColor
     flags: Qt.FramelessWindowHint | Qt.Window | Qt.WindowSystemMenuHint |
-           Qt.WindowMaximizeButtonHint | Qt.WindowMinimizeButtonHint            // 设置无边框属性
-    signal blankAreaClicked() //空白区域被点击了
-    function openLoginPopup(){loginPopup.open()}
+           Qt.WindowMaximizeButtonHint | Qt.WindowMinimizeButtonHint            //设置无边框属性
+    signal blankAreaClicked()                                                   //空白区域被点击了
+    function openLoginPopup(){loginPopup.open()}                                //打开扫码登录弹窗
+    function openLoginByOtherMeansPopup(){loginByOtherMeansPopup.open()}        //打开其他方式登录的弹窗
+    function closeLoginPopup(){loginPopup.close()}                              //打开扫码登录弹窗
+    function closeLoginByOtherMeansPopup(){loginByOtherMeansPopup.close()}      //打开其他方式登录的弹窗
     //设置窗体可拖动,此层级必须在最顶层
     MouseArea {
         id: dragRegion
@@ -36,6 +39,11 @@ Window {
         id:loginPopup
         anchors.centerIn: parent
     }
+    //其他方式登录的弹窗
+    LoginByOtherMeansPopup{
+        id:loginByOtherMeansPopup
+        anchors.centerIn: parent
+    }
     //左边页面
     LeftPage{
         id:leftPage   
@@ -45,11 +53,11 @@ Window {
         anchors.bottom: parent.bottom
         color:BasicConfig.leftBgColor
     }
+    //顶部标题
     TopTitle{
         anchors.left: leftPage.right
         anchors.right: parent.right
         anchors.top: parent.top
         height: 60 * BasicConfig.hScale
     }
-
 }

@@ -1,3 +1,16 @@
+/***************************************************************
+*  @ProjName:   %{CurrentProject:MyCloudMusic}
+*  @FileName:   TopTitle.qml
+*  @Author:     zfy1362021@163.com
+*  @Date:       2024-08-02
+*  @Brief:      顶部标题
+*
+*---------------------------------------------------------------
+*  ||擅长C++/Qt/Qml/Map/OpenGL/WebGis PC/Andriod端应用程序开发，
+*  ||复杂仿真程序开发 (学习交流加群：492954738)
+****************************************************************/
+
+
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
