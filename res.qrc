@@ -14,5 +14,8 @@
         <file>Resources/title/vip.png</file>
         <file>Resources/mianPopups/ele_001.png</file>
         <file>Resources/mianPopups/qrcode.jpg</file>
+        <file>Resources/mianPopups/clear.png</file>
+        <file>Resources/mianPopups/nosee.png</file>
+        <file>Resources/mianPopups/see.png</file>
     </qresource>
 </RCC>
