@@ -30,6 +30,7 @@ QtObject{
     // readonly property real leftWScale  : 255/1300                            //左侧宽占比
     readonly property real wScale : Screen.width/1920                           //控件横向缩放级数
     readonly property real hScale : Screen.height/1080                          //控件纵向缩放级数
+
     Component.onCompleted: {
         console.log(`===============================================
         当前屏幕分辨率是${Screen.width}x${Screen.height}

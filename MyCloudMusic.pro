@@ -23,3 +23,14 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+#----------------------------------TodoList----------------------------------
+#                                   换肤
+#                                   设置
+#                                   精选
+#                                 歌单广场
+#                                  排行榜
+#                                   歌手
+#                                   VIP
+#                                   播客
+#-----------------------------------------------------------------------------

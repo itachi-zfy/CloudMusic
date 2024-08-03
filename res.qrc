@@ -17,5 +17,23 @@
         <file>Resources/mianPopups/clear.png</file>
         <file>Resources/mianPopups/nosee.png</file>
         <file>Resources/mianPopups/see.png</file>
+        <file>Resources/mianPopups/QQ_hover.png</file>
+        <file>Resources/mianPopups/QQ_normal.png</file>
+        <file>Resources/mianPopups/sina_hover.png</file>
+        <file>Resources/mianPopups/sina_normal.png</file>
+        <file>Resources/mianPopups/wx_hover.png</file>
+        <file>Resources/mianPopups/wx_normal.png</file>
+        <file>Resources/mianPopups/wy_hover.png</file>
+        <file>Resources/mianPopups/wy_normal.png</file>
+        <file>Resources/mianPopups/nationFlags/amarican.png</file>
+        <file>Resources/mianPopups/nationFlags/am.png</file>
+        <file>Resources/mianPopups/nationFlags/canada.png</file>
+        <file>Resources/mianPopups/nationFlags/china.png</file>
+        <file>Resources/mianPopups/nationFlags/england.png</file>
+        <file>Resources/mianPopups/nationFlags/Germany.png</file>
+        <file>Resources/mianPopups/nationFlags/hk.png</file>
+        <file>Resources/mianPopups/nationFlags/ita.png</file>
+        <file>Resources/mianPopups/nationFlags/kor.png</file>
+        <file>Resources/mianPopups/nationFlags/Netherland.png</file>
     </qresource>
 </RCC>

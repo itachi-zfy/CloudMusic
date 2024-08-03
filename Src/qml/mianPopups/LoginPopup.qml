@@ -100,7 +100,7 @@ Popup{
             textFormat: Text.RichText
             text: "<span style=\"font-size: 20px;color: #75777f;font-family:'微软雅黑 Light';\">使用</span>
                     <a href=\"https://www.baidu.com\" style=\"text-decoration: none;\">
-                        <span style=\"font-size: 20px;color: cornflowerblue;font-family:'微软雅黑 Light';cursor:pointer;\">网易云音乐APP</span>
+                        <span style=\"font-size: 20px;color: cornflowerblue;font-family:'微软雅黑 Light';cursor:pointer;\">周易云音乐APP</span>
                     </a>
                     <span style=\"font-size: 20px;color: #75777f;font-family:'微软雅黑 Light';\">扫码登录</span>"
             width: qrcode.scale === 0.2?200:300
