@@ -8,5 +8,12 @@
         <file>Src/qml/rightPage/TopTitle.qml</file>
         <file>Src/qml/mianPopups/LoginPopup.qml</file>
         <file>Src/qml/mianPopups/LoginByOtherMeansPopup.qml</file>
+        <file>Src/qml/rightPage/stackPages/CherryPick.qml</file>
+        <file>Src/qml/rightPage/stackPages/Settings.qml</file>
+        <file>Src/qml/rightPage/stackPages/SkinPages.qml</file>
+        <file>Src/qml/rightPage/stackPages/skinPages/PendantPage.qml</file>
+        <file>Src/qml/rightPage/stackPages/skinPages/SkinPage.qml</file>
+        <file>Src/qml/rightPage/stackPages/skinPages/ColorSelectPopup.qml</file>
+        <file>Src/qml/commonUI/ZYYWindow.qml</file>
     </qresource>
 </RCC>

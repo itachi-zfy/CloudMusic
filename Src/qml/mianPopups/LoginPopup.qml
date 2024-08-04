@@ -126,12 +126,12 @@ Popup{
             }
         }
 
-        Label{
+        Text{
             color: "#75777f"
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 50
             anchors.horizontalCenter: parent.horizontalCenter
-            text: "选择其他登录方式 >"
+            text: "选择其他方式登录 >"
             font.pixelSize: 20
             MouseArea{
                 anchors.fill: parent
@@ -143,7 +143,6 @@ Popup{
                     cursorShape = Qt.ArrowCursor
                 }
                 onClicked: {
-                    // Qt.openUrlExternally("https://www.baidu.com")
                     window.openLoginByOtherMeansPopup()
                     window.closeLoginPopup()
                 }

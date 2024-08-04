@@ -8,6 +8,7 @@ Popup{
     height: 638
     clip: true
     closePolicy:Popup.NoAutoClose                               //不允许自动关闭
+
     background: Rectangle{
         anchors.fill: parent
         color:"#1b1b23"

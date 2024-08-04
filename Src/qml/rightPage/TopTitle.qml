@@ -16,6 +16,12 @@ import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
 import "../basic"
 Item {
+    id:titleRoot
+    /**
+      * @type 0表示换肤按钮被点击了
+      * @type 1表示设置按钮被点击了
+      */
+    signal typeClicked(int type)
     //点击空白区域搜索框失焦
     Connections{
         target: window
@@ -43,20 +49,27 @@ Item {
                 border.color: BasicConfig.bordColor
                 border.width: 1
                 anchors.fill: parent
-                property bool effectEnabled: false
                 MouseArea{
                     anchors.fill: parent
                     hoverEnabled: true
                     onExited: {
-                        backForwardRect.color = "transparent"
-                        backForwardRect.effectEnabled = false
+                        if(window.stackBehaviors.length){
+                            backForwardRect.color = "transparent"
+                            backForwardRect.layer.enabled = false
+                        }
                     }
                     onEntered: {
-                        backForwardRect.color = BasicConfig.leftBgColor
-                        backForwardRect.effectEnabled = true
+                        if(window.stackBehaviors.length){
+                            backForwardRect.color = BasicConfig.leftBgColor
+                            backForwardRect.layer.enabled = true
+                            console.log(window.stackBehaviors.length)
+                        }
                     }
                     onClicked:{
-                        console.log("页面返回上一级")
+                        if(window.stackBehaviors.length){
+                            window.stackBehaviors.pop()()
+                            console.log("页面返回上一级")
+                        }
                     }
                 }
             }
@@ -67,7 +80,6 @@ Item {
                 source: "/Resources/title/arrow.png"
                 layer.enabled: true
                 layer.effect: ColorOverlay{
-                    enabled: backForwardRect.effectEnabled
                     source: backForwardIcon
                     color: "white"
 
@@ -355,7 +367,7 @@ Item {
                     parent.layer.enabled = true
                 }
                 onClicked: {
-
+                    titleRoot.typeClicked(0)
                 }
             }
         }
@@ -380,7 +392,7 @@ Item {
                     parent.layer.enabled = true
                 }
                 onClicked: {
-
+                    titleRoot.typeClicked(0)
                 }
             }
         }

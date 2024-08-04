@@ -35,5 +35,7 @@
         <file>Resources/mianPopups/nationFlags/ita.png</file>
         <file>Resources/mianPopups/nationFlags/kor.png</file>
         <file>Resources/mianPopups/nationFlags/Netherland.png</file>
+        <file>Resources/skin/hj.png</file>
+        <file>Resources/skin/wyy.png</file>
     </qresource>
 </RCC>
