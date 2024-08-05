@@ -145,7 +145,7 @@ Item{
     StackView{
         clip: true
         anchors.left: officalRow.left
-        anchors.right: customChangeSkinBtn.right
+        anchors.right: parent.right
         anchors.top: officalRow.bottom
         anchors.topMargin: 20
         anchors.bottom: parent.bottom

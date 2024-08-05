@@ -37,5 +37,12 @@
         <file>Resources/mianPopups/nationFlags/Netherland.png</file>
         <file>Resources/skin/hj.png</file>
         <file>Resources/skin/wyy.png</file>
+        <file>Resources/skin/vipTheme/hjg.png</file>
+        <file>Resources/skin/vipTheme/livehouse.png</file>
+        <file>Resources/skin/vipTheme/ljsy.png</file>
+        <file>Resources/skin/vipTheme/lssl.png</file>
+        <file>Resources/skin/vipTheme/mt.png</file>
+        <file>Resources/skin/vipTheme/tg.png</file>
+        <file>Resources/skin/vipTheme/wlhy.png</file>
     </qresource>
 </RCC>

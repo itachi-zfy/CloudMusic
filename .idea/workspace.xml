@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="79ae9b88-6b04-4e73-9652-3a98f31b4f03" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/hjg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/livehouse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/ljsy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/lssl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/mt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/tg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/wlhy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/SkinPages.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/SkinPages.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/skinPages/SkinPage.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/skinPages/SkinPage.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/res.qrc" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2kDRV1CAgGV2IG9sW5UMSLh8czF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
+        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79ae9b88-6b04-4e73-9652-3a98f31b4f03" name="Changes" comment="" />
+      <created>1722816182461</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722816182461</updated>
+      <workItem from="1722816183554" duration="1000" />
+    </task>
+    <servers />
+  </component>
+</project>
