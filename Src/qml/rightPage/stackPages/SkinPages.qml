@@ -88,6 +88,15 @@ Item{
                     }
                     onClicked: {
                         officalRep.selectedIndex = index
+                        if(index === 0){
+                            if(skinStackView.currentItem.objectName === "Skin"){
+                                skinStackView.currentItem.jumpToCommon()
+                            }
+                        }else if(index === 1){
+                            if(skinStackView.currentItem.objectName === "Skin"){
+                                skinStackView.currentItem.jumpToVIP()
+                            }
+                        }
                     }
                 }
             }
@@ -143,6 +152,7 @@ Item{
     }
     //皮肤页面子栈
     StackView{
+        id:skinStackView
         clip: true
         anchors.left: officalRow.left
         anchors.right: parent.right

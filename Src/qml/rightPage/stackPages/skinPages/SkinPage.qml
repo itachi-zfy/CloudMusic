@@ -4,16 +4,52 @@ import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
 import "../../../basic"
 Item{
+    objectName: "Skin"
+
+    //将当前ScrollView的位置切换到普通皮肤的位置
+    function jumpToCommon(){cusScrollBar.position=0}
+    //将当前ScrollView的位置切换到VIP皮肤的位置
+    function jumpToVIP(){cusScrollBar.position=vipText.y/scrollView.contentHeight}
     ScrollView{
         id:scrollView
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.topMargin: 50
-        height: 500
+        anchors.bottom: parent.bottom
         contentWidth: availableWidth
-        contentHeight: 800
+        // 此处用(parent.height-50)而不直接用height是为了防止报错：
+        // QML ScrollView: Binding loop detected for property "implicitHeight"
+        contentHeight: (parent.height-50)*1.2 + 200
+
         clip: true
+        //////////////////////////////////////////////////////////////////////////////
+        ///Qt5.15.2/root/5.15.2/msvc2019_64/qml/QtQuick/Controls.2/ScrollView.qml   //
+        //此处要将qml源码中的                                                        //
+        // ScrollBar.vertical: ScrollBar {                                          //
+        //     parent: control                                                      //
+        //     x: control.mirrored ? 0 : control.width - width                      //
+        //     y: control.topPadding                                                //
+        //     height: control.availableHeight                                      //
+        //     active: control.ScrollBar.horizontal.active                          //
+        // }                                                                        //
+        //这一部分给注掉，不然就会出现一个小的没用的滚动条                              //
+        //////////////////////////////////////////////////////////////////////////////
+        ScrollBar.vertical: ScrollBar{//自定义ScrollView滚动条，不然访问不到
+            id:cusScrollBar
+            anchors.right: parent.right
+            anchors.rightMargin: 10
+            height: scrollView.availableHeight
+            width: 10
+            policy:ScrollBar.AsNeeded
+            contentItem: Rectangle {
+                visible: parent.active
+                implicitWidth: 10
+                implicitHeight: 10
+                radius: 4
+                color: "#42424b"
+            }
+        }
         //自定义颜色选择器
         ColorSelectPopup{
             id:colorSelector
@@ -125,7 +161,7 @@ Item{
             anchors.topMargin: 20
             Layout.fillHeight: true
             Layout.fillWidth: true
-            height: 500
+            height: window.height/1.8
             columns: 4
             rows:2
             columnSpacing: 20
@@ -141,16 +177,16 @@ Item{
                     radius: 10
                     clip: true
                     property bool hovered: false
-                    Image {
-                        anchors.fill: vipInnerRect
-                        source: src
-                    }
                     Rectangle{
                         id:vipInnerRect
                         clip: true
                         anchors.fill: parent
                         anchors.bottomMargin: 80
                         color: "transparent"
+                        Image {
+                            anchors.fill: vipInnerRect
+                            source: src
+                        }
                     }
                     Item{
                         anchors.centerIn: vipInnerRect
