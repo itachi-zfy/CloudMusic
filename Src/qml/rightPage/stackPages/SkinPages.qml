@@ -37,6 +37,17 @@ Item{
                         }
                         onClicked: {
                             skinTitleRep.selectedIndex = index
+                            if(skinTitleRep.selectedIndex === 0){
+                                if(skinStackView.currentItem.objectName !== "Skin"){
+                                    skinStackView.push("/Src/qml/rightPage/stackPages/skinPages/SkinPage.qml")
+                                }
+                            }else if(skinTitleRep.selectedIndex === 1){
+                                if(skinStackView.currentItem.objectName !== "Pendant"){
+                                    skinStackView.push("/Src/qml/rightPage/stackPages/skinPages/PendantPage.qml")
+                                }
+                            }
+                            //存储栈行为
+                            window.stackBehaviors.push(()=>{skinStackView.pop()})
                         }
                     }
                 }
@@ -52,113 +63,25 @@ Item{
             }
         }
     }
-    //官方、会员按钮
-    Row{
-        id:officalRow
-        anchors.top:skinTitleRow.bottom
-        anchors.topMargin: 18 * BasicConfig.hScale
-        anchors.left: skinTitleRow.left
-        spacing: 10 * BasicConfig.wScale
-        Repeater{
-            id:officalRep
-            model: 2
-            property int selectedIndex: 0
-            Rectangle{
-                width: 80
-                height: 40
-                radius: 20
-                border.width: 1
-                border.color:index === officalRep.selectedIndex ? "#331c1f":BasicConfig.fieldBgBordColor
-                color: index === officalRep.selectedIndex ?"#24181c":"transparent"
-                Label{
-                    text: index?"会员":"官方"
-                    color:index === officalRep.selectedIndex ? "#eb4d44":"#e8e8e8"
-                    font.family: "黑体"
-                    font.pixelSize: 20
-                    anchors.centerIn:parent
-                }
-                MouseArea{
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    onEntered: {
-                        cursorShape = Qt.PointingHandCursor
-                    }
-                    onExited: {
-                        cursorShape = Qt.ArrowCursor
-                    }
-                    onClicked: {
-                        officalRep.selectedIndex = index
-                        if(index === 0){
-                            if(skinStackView.currentItem.objectName === "Skin"){
-                                skinStackView.currentItem.jumpToCommon()
-                            }
-                        }else if(index === 1){
-                            if(skinStackView.currentItem.objectName === "Skin"){
-                                skinStackView.currentItem.jumpToVIP()
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //VIP自定义换肤按键
-    Rectangle{
-        id:customChangeSkinBtn
-        anchors.verticalCenter: officalRow.verticalCenter
-        anchors.right: parent.right
-        anchors.rightMargin: 40
-        width: 150
-        height: 40
-        radius: 8
-        color:"#212127"
-        border.width: 1
-        border.color:"#28282e"
-        Image {
-            id: jpIcon
-            source: "/Resources/skin/hj.png"
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.left: parent.left
-            anchors.leftMargin: 10
-        }
-        Label{
-            text: "VIP"
-            color:"#988c89"
-            font.family: "黑体"
-            font.pixelSize: 10
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.left: jpIcon.right
-            anchors.leftMargin: 5
-        }
-        Label{
-            text: "自定义换肤"
-            color:"white"
-            font.family: BasicConfig.commFont
-            font.pixelSize: 14
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.right: parent.right
-            anchors.rightMargin: 10
-        }
-        MouseArea{
-            anchors.fill: parent
-            hoverEnabled: true
-            onEntered: {
-                cursorShape = Qt.PointingHandCursor
-            }
-            onExited: {
-                cursorShape = Qt.ArrowCursor
-            }
-        }
-    }
+
+
     //皮肤页面子栈
     StackView{
         id:skinStackView
         clip: true
-        anchors.left: officalRow.left
+        anchors.left: skinTitleRow.left
         anchors.right: parent.right
-        anchors.top: officalRow.bottom
-        anchors.topMargin: 20
+        anchors.top: skinTitleRow.bottom
         anchors.bottom: parent.bottom
         initialItem: "/Src/qml/rightPage/stackPages/skinPages/SkinPage.qml"
+        onCurrentItemChanged: {
+            if(null !== currentItem){
+                if(currentItem.objectName === "Skin"){
+                    skinTitleRep.selectedIndex = 0
+                }else if(currentItem.objectName === "Pendant"){
+                    skinTitleRep.selectedIndex = 1
+                }
+            }
+        }
     }
 }

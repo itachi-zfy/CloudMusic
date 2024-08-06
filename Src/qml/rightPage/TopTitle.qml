@@ -62,13 +62,12 @@ Item {
                         if(window.stackBehaviors.length){
                             backForwardRect.color = BasicConfig.leftBgColor
                             backForwardRect.layer.enabled = true
-                            console.log(window.stackBehaviors.length)
                         }
                     }
                     onClicked:{
                         if(window.stackBehaviors.length){
                             window.stackBehaviors.pop()()
-                            console.log("页面返回上一级")
+                            console.log(`页面返回上一级，当前行为栈深度：${window.stackBehaviors.length}`)
                         }
                     }
                 }

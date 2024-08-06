@@ -10,9 +10,103 @@ Item{
     function jumpToCommon(){cusScrollBar.position=0}
     //将当前ScrollView的位置切换到VIP皮肤的位置
     function jumpToVIP(){cusScrollBar.position=vipText.y/scrollView.contentHeight}
+
+    //官方、会员按钮
+    Row{
+        id:officalRow
+        anchors.top:parent.top
+        anchors.topMargin: 25 * BasicConfig.hScale
+        anchors.left: parent.left
+        spacing: 10 * BasicConfig.wScale
+        Repeater{
+            id:officalRep
+            model: 2
+            property int selectedIndex: 0
+            Rectangle{
+                width: 80
+                height: 40
+                radius: 20
+                border.width: 1
+                border.color:index === officalRep.selectedIndex ? "#331c1f":BasicConfig.fieldBgBordColor
+                color: index === officalRep.selectedIndex ?"#24181c":"transparent"
+                Label{
+                    text: index?"会员":"官方"
+                    color:index === officalRep.selectedIndex ? "#eb4d44":"#e8e8e8"
+                    font.family: "黑体"
+                    font.pixelSize: 20
+                    anchors.centerIn:parent
+                }
+                MouseArea{
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    onEntered: {
+                        cursorShape = Qt.PointingHandCursor
+                    }
+                    onExited: {
+                        cursorShape = Qt.ArrowCursor
+                    }
+                    onClicked: {
+                        if(index === 0){
+                            skinStackView.currentItem.jumpToCommon()
+                        }else if(index === 1){
+                            skinStackView.currentItem.jumpToVIP()
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //VIP自定义换肤按键
+    Rectangle{
+        id:customChangeSkinBtn
+        anchors.right: parent.right
+        anchors.rightMargin: 40
+        anchors.verticalCenter: officalRow.verticalCenter
+        width: 150
+        height: 40
+        radius: 8
+        color:"#212127"
+        border.width: 1
+        border.color:"#28282e"
+        Image {
+            id: jpIcon
+            source: "/Resources/skin/hj.png"
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.left
+            anchors.leftMargin: 10
+        }
+        Label{
+            text: "VIP"
+            color:"#988c89"
+            font.family: "黑体"
+            font.pixelSize: 10
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: jpIcon.right
+            anchors.leftMargin: 5
+        }
+        Label{
+            text: "自定义换肤"
+            color:"white"
+            font.family: BasicConfig.commFont
+            font.pixelSize: 14
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.right: parent.right
+            anchors.rightMargin: 10
+        }
+        MouseArea{
+            anchors.fill: parent
+            hoverEnabled: true
+            onEntered: {
+                cursorShape = Qt.PointingHandCursor
+            }
+            onExited: {
+                cursorShape = Qt.ArrowCursor
+            }
+        }
+    }
     ScrollView{
         id:scrollView
-        anchors.top: parent.top
+        anchors.top: customChangeSkinBtn.bottom
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.topMargin: 50

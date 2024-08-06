@@ -2,25 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79ae9b88-6b04-4e73-9652-3a98f31b4f03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/hjg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/livehouse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/ljsy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/lssl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/mt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/tg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/skin/vipTheme/wlhy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/TopTitle.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/TopTitle.qml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/SkinPages.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/SkinPages.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/skinPages/PendantPage.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/skinPages/PendantPage.qml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/skinPages/SkinPage.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/skinPages/SkinPage.qml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/res.qrc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2kDRV1CAgGV2IG9sW5UMSLh8czF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,7 +26,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "nodejs_package_manager_path": "npm"
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -49,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722816182461</updated>
       <workItem from="1722816183554" duration="1000" />
+      <workItem from="1722902499713" duration="3000" />
     </task>
     <servers />
   </component>
