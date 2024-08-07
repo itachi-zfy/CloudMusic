@@ -346,7 +346,7 @@ Item{
                                 width: 1
                                 height:conText.height
                                 Image {
-                                    id: jpIcon
+                                    id: subJpIcon
                                     source: "/Resources/skin/hj.png"
                                     anchors.verticalCenter: parent.verticalCenter
                                     anchors.left: parent.left
@@ -357,7 +357,7 @@ Item{
                                     font.family: "黑体"
                                     font.pixelSize: 10
                                     anchors.verticalCenter: parent.verticalCenter
-                                    anchors.left: jpIcon.right
+                                    anchors.left: subJpIcon.right
                                     anchors.leftMargin: 5
                                 }
                             }

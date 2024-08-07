@@ -44,5 +44,11 @@
         <file>Resources/skin/vipTheme/mt.png</file>
         <file>Resources/skin/vipTheme/tg.png</file>
         <file>Resources/skin/vipTheme/wlhy.png</file>
+        <file>Resources/skin/gifs/giphy1.gif</file>
+        <file>Resources/skin/gifs/giphy2.gif</file>
+        <file>Resources/skin/gifs/giphy3.gif</file>
+        <file>Resources/skin/gifs/giphy4.gif</file>
+        <file>Resources/skin/gifs/giphy5.gif</file>
+        <file>Resources/skin/gifs/giphy6.gif</file>
     </qresource>
 </RCC>
