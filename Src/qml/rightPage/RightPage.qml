@@ -24,11 +24,11 @@ Item{
         anchors.top: parent.top
         height: 60 * BasicConfig.hScale
         onTypeClicked: {
-            if(type === 0){
+            if(type === 0){//换肤页面
                 if(mainStackView.currentItem.objectName !== "SkinPage"){
                     mainStackView.push("/Src/qml/rightPage/stackPages/SkinPages.qml")
                 }
-            }else if(type == 1){
+            }else if(type == 1){//设置页面
                 if(mainStackView.currentItem.objectName !== "Settings"){
                     mainStackView.push("/Src/qml/rightPage/stackPages/Settings.qml")
                 }

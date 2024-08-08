@@ -49,6 +49,7 @@ Item{
                         cursorShape = Qt.ArrowCursor
                     }
                     onClicked: {
+                        selectorRep.selectedIndex = index
                         flick.contentY = index*flick.itemHeight + 32*(index-1)//32是title字体大小
                     }
                 }
@@ -84,6 +85,7 @@ Item{
         onContentYChanged: {
             for(let i = 0;i<pendantRoot.types.length;i++){
                 pendantRep.itemAt(i).globalY = Math.abs(pendantRep.itemAt(i).mapToItem(flick,0,0).y)
+                if(flick.contentY > flick.itemHeight*i && flick.contentY < flick.itemHeight*(i+1))selectorRep.selectedIndex = i
             }
         }
         Column{

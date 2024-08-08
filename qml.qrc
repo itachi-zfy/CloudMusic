@@ -15,5 +15,7 @@
         <file>Src/qml/rightPage/stackPages/skinPages/SkinPage.qml</file>
         <file>Src/qml/rightPage/stackPages/skinPages/ColorSelectPopup.qml</file>
         <file>Src/qml/commonUI/ZYYWindow.qml</file>
+        <file>Src/qml/rightPage/stackPages/settingItems/Counter.qml</file>
+        <file>Src/qml/rightPage/stackPages/settingItems/Common.qml</file>
     </qresource>
 </RCC>
