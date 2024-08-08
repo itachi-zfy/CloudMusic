@@ -92,7 +92,7 @@ Item{
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.top: setingTitleFlow.bottom
-            anchors.topMargin: 15
+            anchors.topMargin: 20
             anchors.rightMargin: window.width * (36 * BasicConfig.wScale / 1317)*2
             height: 1
             color: "#212127"
