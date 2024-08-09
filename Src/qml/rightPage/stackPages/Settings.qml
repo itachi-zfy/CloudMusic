@@ -128,6 +128,8 @@ Item{
                 Counter{}
                 //常规
                 Common{}
+                //系统
+                SystemCfg{}
             }
         }
     }

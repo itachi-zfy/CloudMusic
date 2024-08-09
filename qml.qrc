@@ -17,5 +17,8 @@
         <file>Src/qml/commonUI/ZYYWindow.qml</file>
         <file>Src/qml/rightPage/stackPages/settingItems/Counter.qml</file>
         <file>Src/qml/rightPage/stackPages/settingItems/Common.qml</file>
+        <file>Src/qml/commonUI/ZYYComboBox.qml</file>
+        <file>Src/qml/rightPage/stackPages/settingItems/SystemCfg.qml</file>
+        <file>Src/qml/commonUI/ZYYCheckBox.qml</file>
     </qresource>
 </RCC>

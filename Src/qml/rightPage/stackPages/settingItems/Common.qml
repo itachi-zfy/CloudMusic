@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import "../../../basic"
+import "../../../commonUI"
 
 Item {
     anchors.left: parent.left
@@ -28,115 +29,16 @@ Item {
                <span style=\"font-size: 20px;color: #89898c;font-family:'黑体';\">(如果字体显示不清晰，请在控制面板-字体设置中启动系统Clear Type设置)</span>"
     }
     //字体选择框
-    ComboBox{
+    ZYYComboBox{
         id:fontSelectorCbx
         width: 150
         height: 30
         anchors.left: counterDiscriptionLabel.left
         anchors.top: counterDiscriptionLabel.bottom
         anchors.topMargin: 20
-        readonly property var fontFamilies:["默认","仿宋","华文中宋","华文仿宋","华文宋体","华文新魏","华文楷体","华文细黑","华文行书"
-        ,"华文楷书","宋体","幼圆","微软雅黑","微软雅黑 Light","新宋体","方正姚体","方正舒体"]
-        property string text: fontFamilies[0]
-        property real indicatorRotation: 90
-        model:fontFamilies
-        background: Rectangle{
-            anchors.fill: parent
-            radius: 15
-            border.width: 1
-            border.color: "#28282e"
-            color: "#1a1a20"
-            MouseArea{
-                anchors.fill: parent
-                hoverEnabled: true
-                onEntered: {
-                    cursorShape = Qt.PointingHandCursor
-                }
-                onExited: {
-                    cursorShape = Qt.ArrowCursor
-                }
-                onClicked: {
-                    fontSelectorCbx.popup.open()
-                }
-            }
-        }
-        indicator: Label{
-            text: ">"
-            font.pixelSize: 22
-            font.bold: true
-            font.family: "黑体"
-            anchors.right: parent.right
-            color:"#e9e9e9"
-            anchors.rightMargin: 10
-            anchors.verticalCenter: parent.verticalCenter
-            rotation: fontSelectorCbx.indicatorRotation
-        }
-        contentItem: Text {
-            text: fontSelectorCbx.text
-            leftPadding: 10
-            color: "white"
-            font.pixelSize: 16
-            font.family: BasicConfig.commFont
-            verticalAlignment: Text.AlignVCenter
-            elide: Text.ElideRight
-        }
-        popup:Popup{
-            x:0
-            y:parent.height+5
-            width: parent.width
-            height:300
-            onOpened:fontSelectorCbx.indicatorRotation = -90
-            onClosed:fontSelectorCbx.indicatorRotation =  90
-            background:Rectangle{
-                anchors.fill: parent
-                radius: 10
-                color:"#2d2d37"
-                clip:true
-                ListView{
-                    anchors.fill: parent
-                    model: fontSelectorCbx.fontFamilies
-                    ScrollBar.vertical: ScrollBar{//自定义ScrollView滚动条，不然访问不到
-                        id:cusScrollBar
-                        width: 10
-                        policy:ScrollBar.AsNeeded
-                        contentItem: Rectangle {
-                            visible: parent.active
-                            color: "#42424b"
-                        }
-                    }
-                    delegate: Rectangle{
-                        width: fontSelectorCbx.width-10
-                        height: 40
-                        color:"transparent"
-                        Text {
-                            color:"#d6d6d8"
-                            text: modelData
-                            leftPadding: 10
-                            font.pixelSize: 16
-                            anchors.left: parent.left
-                            anchors.verticalCenter: parent.verticalCenter
-                            font.family:  BasicConfig.commFont
-                        }
-                        MouseArea{
-                            anchors.fill: parent
-                            hoverEnabled: true
-                            onEntered: {
-                                parent.color = "#393943"
-                                cursorShape = Qt.PointingHandCursor
-                            }
-                            onExited: {
-                                parent.color = "transparent"
-                                cursorShape = Qt.ArrowCursor
-                            }
-                            onClicked: {
-                                fontSelectorCbx.text = modelData
-                                fontSelectorCbx.popup.close()
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        text:"默认"
+        model: ["默认","仿宋","华文中宋","华文仿宋","华文宋体","华文新魏","华文楷体","华文细黑","华文行书"
+            ,"华文楷书","宋体","幼圆","微软雅黑","微软雅黑 Light","新宋体","方正姚体","方正舒体"]
     }
 
     //其他设置

@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
 import "../basic"
+import "../commonUI"
 Popup{
     id:popRoot
     width: 466
@@ -405,57 +406,11 @@ Popup{
                 anchors.left: pwdTextField.left
                 anchors.right: pwdTextField.right
                 //自动登录
-                Item{
+                ZYYCheckBox{
                     width: 100
                     anchors.top: parent.top
                     anchors.bottom: parent.bottom
-                    MouseArea{
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        onEntered: {
-                            cursorShape = Qt.PointingHandCursor
-                        }
-                        onExited: {
-                            cursorShape = Qt.ArrowCursor
-                        }
-                        onClicked: {
-                            autoLoginRect.selected = !autoLoginRect.selected
-                        }
-                    }
-                    Row{
-                        anchors.left:parent.left
-                        anchors.verticalCenter: parent.verticalCenter
-                        spacing: 10
-                        Rectangle{
-                            id:autoLoginRect
-                            width: 20
-                            height: width
-                            radius: 2
-                            border.width: 1
-                            border.color: "#7a7a7f"
-                            color: selected?"#eb4d44":"transparent"
-                            property bool selected: false
-                            Label{
-                                id:selectedLabel
-                                visible: parent.selected
-                                color:"white"
-                                font.bold: true
-                                text: "√"
-                                font.pixelSize: 18
-                                font.family: BasicConfig.commFont
-                                anchors.centerIn: parent
-                            }
-                        }
-                        Label{
-                            id:autoLoginLabel
-                            color:"#818186"
-                            font.bold: true
-                            text: "自动登录"
-                            font.pixelSize: 18
-                            font.family: BasicConfig.commFont
-                            anchors.verticalCenter: autoLoginRect.verticalCenter
-                        }
-                    }
+                    text: "自动登录"
                 }
                 //忘记密码与验证码登录
                 Row{
