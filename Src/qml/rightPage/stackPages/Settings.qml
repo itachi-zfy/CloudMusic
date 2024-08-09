@@ -130,6 +130,8 @@ Item{
                 Common{}
                 //系统
                 SystemCfg{}
+                //播放
+                Play{}
             }
         }
     }

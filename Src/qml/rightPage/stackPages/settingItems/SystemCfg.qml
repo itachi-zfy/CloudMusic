@@ -6,7 +6,7 @@ import "../../../commonUI"
 Item {
     anchors.left: parent.left
     anchors.right: parent.right
-    height: 150
+    height: 200
     Label{
         id: sysTitleLabel
         text: "系统"
@@ -22,7 +22,7 @@ Item {
         anchors.left: sysTitleLabel.right
         anchors.right: parent.right
         anchors.top: sysTitleLabel.top
-        anchors.bottom: parent.bottom
+        height: 150
         anchors.leftMargin: 100
         Column{
             spacing: 20
@@ -43,7 +43,7 @@ Item {
                     font.pixelSize: 18
                     font.bold: true
                     font.family: "黑体"
-                    color:"white"
+                    color:"#ddd"
                     verticalAlignment: Text.AlignVCenter
                     anchors.verticalCenter: parent.verticalCenter
                 }
@@ -63,7 +63,7 @@ Item {
                     font.pixelSize: 18
                     font.bold: true
                     font.family: "黑体"
-                    color:"white"
+                    color:"#ddd"
                     verticalAlignment: Text.AlignVCenter
                     anchors.verticalCenter: parent.verticalCenter
                 }
@@ -82,7 +82,7 @@ Item {
                     font.pixelSize: 18
                     font.bold: true
                     font.family: "黑体"
-                    color:"white"
+                    color:"#ddd"
                     verticalAlignment: Text.AlignVCenter
                     anchors.verticalCenter: parent.verticalCenter
                 }
@@ -101,8 +101,10 @@ Item {
     }
     //单选按钮互斥组
     ExclusiveGroup {id:closePanExclusiveGroup}
+
     //关闭主面板
     Row{
+        id:closePanRow
         anchors.left: timerCloseItems.left
         anchors.top: timerCloseItems.bottom
         spacing: 30
@@ -111,67 +113,18 @@ Item {
             font.pixelSize: 20
             font.bold: true
             font.family: "黑体"
-            color:"white"
+            color:"#ddd"
         }
-        RadioButton{
-            height: 25
-            width: 155
-            text: "最小化到系统托盘"
+        ZYYRadioButton{
+            checked: true
+            contentText: "最小化到系统托盘"
             exclusiveGroup: closePanExclusiveGroup
-            style: RadioButtonStyle {
-                indicator: Rectangle {
-                    implicitWidth: 24;
-                    implicitHeight: 24;
-                    radius: 12;
-                    color:"transparent"
-                    border.color:control.checked?"#eb4d44" : ( control.hovered ? "white":"#707074");                    border.width: 1;
-                    Rectangle {
-                        anchors.fill: parent;
-                        visible: control.checked;
-                        color: "#eb4d44";
-                        radius: width/2;
-                        anchors.margins: 5;
-                    }
-                }
-                label: Text {
-                    color:"#707074"
-                    font.pixelSize: 18
-                    font.family: "黑体"
-                    anchors.verticalCenter: parent.verticalCenter
-                    verticalAlignment: Text.AlignVCenter
-                    text: control.text;
-                }
-            }
         }
-        RadioButton{
-            height: 25
-            width: 125
-            text: "退出云音乐"
+        ZYYRadioButton{
+            contentText: "退出云音乐"
             exclusiveGroup: closePanExclusiveGroup
-            style: RadioButtonStyle {
-                indicator: Rectangle {
-                    implicitWidth: 24;
-                    implicitHeight: 24;
-                    radius: 12;
-                    color:"transparent"
-                    border.color:control.checked?"#eb4d44" : ( control.hovered ?"white" :"#707074");
-                    border.width: 1;
-                    Rectangle {
-                        anchors.fill: parent;
-                        visible: control.checked;
-                        color: "#eb4d44";
-                        radius: width/2;
-                        anchors.margins: 5;
-                    }
-                }
-                label: Text {
-                    color:"#707074"
-                    font.pixelSize: 18
-                    font.family: "黑体"
-                    verticalAlignment: Text.AlignVCenter
-                    text: control.text;
-                }
-            }
         }
     }
+    //分割线
+    ZYYSpliteLine{}
 }

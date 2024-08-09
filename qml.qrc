@@ -20,5 +20,8 @@
         <file>Src/qml/commonUI/ZYYComboBox.qml</file>
         <file>Src/qml/rightPage/stackPages/settingItems/SystemCfg.qml</file>
         <file>Src/qml/commonUI/ZYYCheckBox.qml</file>
+        <file>Src/qml/commonUI/ZYYRadioButton.qml</file>
+        <file>Src/qml/rightPage/stackPages/settingItems/Play.qml</file>
+        <file>Src/qml/commonUI/ZYYSpliteLine.qml</file>
     </qresource>
 </RCC>

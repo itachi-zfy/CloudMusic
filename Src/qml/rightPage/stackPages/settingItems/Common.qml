@@ -52,11 +52,11 @@ Item {
         spacing: 30
         Repeater{
             anchors.fill: parent
-            model: ["<span style=\"font-size: 20px;color: white;font-family:'黑体';font-bold:true;\">开机自动运行</span>",
-            "<span style=\"font-size: 20px;color: white;font-family:'黑体';font-bold:true;\">将网易云音乐设置为默认播放器</span>",
-            "<span style=\"font-size: 20px;color: white;font-family:'黑体';font-bold:true;\">开启GPU加速</span><span style=\"font-size: 20px;color: #89898c;font-family:'黑体';\">(若软件黑屏，请关闭GPU加速尝试解决)</span>",
-            "<span style=\"font-size: 20px;color: white;font-family:'黑体';font-bold:true;\">禁用动画效果</span><span style=\"font-size: 20px;color: #89898c;font-family:'黑体';\">(减少部分资源占用)</span>",
-            "<span style=\"font-size: 20px;color: white;font-family:'黑体';font-bold:true;\">禁用系统缩放比例</span><span style=\"font-size: 20px;color: #89898c;font-family:'黑体';\">(减少部分资源占用)</span><br><span>*高清屏适配，禁用后建议重启软件</span>"]
+            model: ["<span style=\"font-size: 20px;color: #ddd;font-family:'黑体';font-bold:true;\">开机自动运行</span>",
+            "<span style=\"font-size: 20px;color: #ddd;font-family:'黑体';font-bold:true;\">将网易云音乐设置为默认播放器</span>",
+            "<span style=\"font-size: 20px;color: #ddd;font-family:'黑体';font-bold:true;\">开启GPU加速</span><span style=\"font-size: 20px;color: #89898c;font-family:'黑体';\">(若软件黑屏，请关闭GPU加速尝试解决)</span>",
+            "<span style=\"font-size: 20px;color: #ddd;font-family:'黑体';font-bold:true;\">禁用动画效果</span><span style=\"font-size: 20px;color: #89898c;font-family:'黑体';\">(减少部分资源占用)</span>",
+            "<span style=\"font-size: 20px;color: #ddd;font-family:'黑体';font-bold:true;\">禁用系统缩放比例</span><span style=\"font-size: 20px;color: #89898c;font-family:'黑体';\">(减少部分资源占用)</span><br><span>*高清屏适配，禁用后建议重启软件</span>"]
             Item{
                 anchors.left: parent.left
                 anchors.right: parent.right
@@ -114,14 +114,5 @@ Item {
         }
     }
     //分割线
-    Rectangle{
-        id:cutLine02
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: commonOtherSettingsColumn.bottom
-        anchors.topMargin: 15
-        anchors.rightMargin: window.width * (36 * BasicConfig.wScale / 1317)*2
-        height: 1
-        color: "#212127"
-    }
+    ZYYSpliteLine{}
 }
