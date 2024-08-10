@@ -13,6 +13,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
 import "../basic"
+import "../commonUI"
 Item {
     id:titleRoot
     /**
@@ -22,7 +23,7 @@ Item {
     signal typeClicked(int type)
     //点击空白区域搜索框失焦
     Connections{
-        target: window
+        target: BasicConfig
         function onBlankAreaClicked(){
             searchTextField.focus = false
         }
@@ -235,60 +236,11 @@ Item {
                         }
                     }
                 }
-                Item{
+                ZYYVipIconItem{
                     id:vipItem
                     height: userIconRect.height
                     width: loadStateText.implicitWidth * 1.2
                     anchors.verticalCenter: parent.verticalCenter
-                    Rectangle{
-                        id:vipRect
-                        radius: 8 * BasicConfig.wScale
-                        width: parent.width - vipRect.radius
-                        height:14 * BasicConfig.wScale
-                        color: "#dadada"
-                        anchors.left: parent.left
-                        anchors.verticalCenter: parent.verticalCenter
-                        Label{
-                            text: "VIP开通"
-                            anchors.left: parent.left
-                            anchors.leftMargin: parent.radius + 4
-                            color:"#f8f9f9"
-                            font.pixelSize: parent.height/2
-                            font.family: BasicConfig.commFont
-                            anchors.verticalCenter: parent.verticalCenter
-                        }
-                    }
-                    //背景色边框矩形
-                    Rectangle{
-                        id:bgBordRect
-                        width: vipRect.height + 4
-                        height: width
-                        radius: width/2
-                        color: BasicConfig.mainBgColor
-                        anchors.verticalCenter: parent.verticalCenter
-                        Rectangle{
-                            id:r1
-                            anchors.fill: parent
-                            anchors.margins: 1
-                            radius: width/2
-                            color: "#dadada"
-                            anchors.centerIn: parent
-                            Rectangle{
-                                id:r2
-                                anchors.fill: parent
-                                anchors.margins: 4 * BasicConfig.wScale
-                                radius: width/2
-                                color: "#cecece"
-                                anchors.centerIn: parent
-                            }
-                        }
-                    }
-                    MouseArea{
-                        anchors.fill: parent
-                        onClicked: {
-                            window.openLoginPopup()
-                        }
-                    }
                 }
             }
         }

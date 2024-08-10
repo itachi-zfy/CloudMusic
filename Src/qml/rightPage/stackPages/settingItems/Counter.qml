@@ -21,7 +21,7 @@ Item{
         font.family: BasicConfig.commFont
         anchors.verticalCenter: counterTitleLabel.verticalCenter
         anchors.left: counterTitleLabel.right
-        anchors.leftMargin: 100
+        anchors.leftMargin: 150
         color:"#e8e8e8"
     }
     Rectangle{

@@ -16,13 +16,14 @@ Item {
         anchors.left: parent.left
         color:"white"
     }
+
     //启动时候播放到平衡音量
     Column{
         id:col1
         anchors.top : playTitleLabel.top
         anchors.left: playTitleLabel.right
         anchors.right: parent.right
-        anchors.leftMargin: 100
+        anchors.leftMargin: 150
         spacing:30
         ZYYCheckBox{
             width: 1

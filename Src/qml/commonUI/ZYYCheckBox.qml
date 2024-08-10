@@ -5,16 +5,18 @@ Item {
     id:checkBox
     property string text: ""
     property color textColor: "#ddd"
+    property bool enabledState: true
     property var textFormat: Text.AutoText
     property bool checked: false
     onCheckedChanged: rect.selected = checked
-    width: 1
+    width: label.implicitWidth + rect.implicitWidth + 10
     height: 25
+    opacity: checkBox.enabledState?1:0.5
     MouseArea{
         anchors.fill: parent
         hoverEnabled: true
         onEntered: {
-            cursorShape = Qt.PointingHandCursor
+            cursorShape = checkBox.enabledState?Qt.PointingHandCursor:Qt.ForbiddenCursor
         }
         onExited: {
             cursorShape = Qt.ArrowCursor

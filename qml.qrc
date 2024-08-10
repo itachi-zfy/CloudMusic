@@ -23,5 +23,15 @@
         <file>Src/qml/commonUI/ZYYRadioButton.qml</file>
         <file>Src/qml/rightPage/stackPages/settingItems/Play.qml</file>
         <file>Src/qml/commonUI/ZYYSpliteLine.qml</file>
+        <file>Src/qml/rightPage/stackPages/settingItems/MessageAndPrivacy.qml</file>
+        <file>Src/qml/rightPage/stackPages/settingItems/CustomShotCut.qml</file>
+        <file>Src/qml/commonUI/ZYYShotCutTextField.qml</file>
+        <file>Src/qml/rightPage/stackPages/settingItems/ToneQualityAndDownload.qml</file>
+        <file>Src/qml/rightPage/stackPages/settingItems/DesktopLyrics.qml</file>
+        <file>Src/qml/rightPage/stackPages/settingItems/Tools.qml</file>
+        <file>Src/qml/rightPage/stackPages/settingItems/AboutZYY.qml</file>
+        <file>Src/qml/commonUI/ZYYVipIconItem.qml</file>
+        <file>Src/qml/commonUI/ZYYFloderSet.qml</file>
+        <file>Src/qml/commonUI/ZZYSlider.qml</file>
     </qresource>
 </RCC>

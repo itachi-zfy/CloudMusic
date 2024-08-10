@@ -22,7 +22,7 @@ Item {
         font.family: BasicConfig.commFont
         anchors.verticalCenter: counterTitleLabel.verticalCenter
         anchors.left: counterTitleLabel.right
-        anchors.leftMargin: 100
+        anchors.leftMargin: 150
         color:"#e8e8e8"
         textFormat: Text.RichText
         text: "<span style=\"font-size: 20px;color: white;font-family:'黑体';font-bold:true;\">字体选择</span>

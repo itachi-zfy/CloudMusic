@@ -44,6 +44,7 @@ Item{
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 100
+        clip:true
         initialItem: "/Src/qml/rightPage/stackPages/CherryPick.qml"
     }
 

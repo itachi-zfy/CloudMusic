@@ -23,7 +23,8 @@ void globalRegist(){
 void init(){
     singletonRegist();
     globalRegist();
-
+    //在QWL当中使用FileDialog如果不加这行会报错
+    QCoreApplication::setOrganizationName("Some organization");
     //查看系统当中的字体
     // QStringList families = QFontDatabase().families();
     // for(QString& family: families)qDebug()<<family;

@@ -105,6 +105,7 @@ ZYYWindow {
             anchors.top: parent.top
             anchors.topMargin: 20
             height: parent.height/5
+
             contentItem: Rectangle{
                 anchors.fill: parent
                 anchors.leftMargin: 5

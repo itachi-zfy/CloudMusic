@@ -23,7 +23,7 @@ Item {
         anchors.right: parent.right
         anchors.top: sysTitleLabel.top
         height: 150
-        anchors.leftMargin: 100
+        anchors.leftMargin: 150
         Column{
             spacing: 20
             anchors.fill: parent

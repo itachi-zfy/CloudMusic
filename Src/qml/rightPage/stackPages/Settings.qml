@@ -104,7 +104,7 @@ Item{
             anchors.top: cutLine01.bottom
             anchors.bottom: parent.bottom
             anchors.topMargin: 10
-            contentHeight: 2000
+            contentHeight: 4000
             clip: true
             ScrollBar.vertical: ScrollBar{//自定义ScrollView滚动条，不然访问不到
                 id:cusScrollBar
@@ -132,6 +132,18 @@ Item{
                 SystemCfg{}
                 //播放
                 Play{}
+                //消息与隐私
+                MessageAndPrivacy{}
+                //自定义快捷键
+                CustomShotCut{}
+                //音质与下载
+                ToneQualityAndDownload{}
+                //桌面歌词
+                DesktopLyrics{}
+                //工具
+                Tools{}
+                //关于周易云音乐
+                AboutZYY{}
             }
         }
     }

@@ -10,7 +10,7 @@ ZYYWindow {
     width: 1317
     height: 933
     visible: true
-    title: qsTr("CloudMusic")
+    title: "ZYYCloudMusic"
     bgColor: BasicConfig.mainBgColor
     property var stackBehaviors : []                                            //存储页面栈的行为
     function openLoginPopup(){loginPopup.open()}                                //打开扫码登录弹窗
