@@ -50,5 +50,9 @@
         <file>Resources/skin/gifs/giphy4.gif</file>
         <file>Resources/skin/gifs/giphy5.gif</file>
         <file>Resources/skin/gifs/giphy6.gif</file>
+        <file>Resources/setting/iphone.png</file>
+        <file>Resources/setting/andriod.png</file>
+        <file>Resources/setting/windows.png</file>
+        <file>Resources/searchBox/remove.png</file>
     </qresource>
 </RCC>

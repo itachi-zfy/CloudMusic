@@ -33,6 +33,7 @@ Item{
                     mainStackView.push("/Src/qml/rightPage/stackPages/Settings.qml")
                 }
             }
+            //页面切换行为入栈
             window.stackBehaviors.push(()=>{mainStackView.pop()})
         }
     }

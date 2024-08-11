@@ -143,8 +143,8 @@ Popup{
                     cursorShape = Qt.ArrowCursor
                 }
                 onClicked: {
-                    window.openLoginByOtherMeansPopup()
-                    window.closeLoginPopup()
+                    BasicConfig.openLoginByOtherMeansPopup()
+                    BasicConfig.closeLoginPopup()
                 }
             }
         }

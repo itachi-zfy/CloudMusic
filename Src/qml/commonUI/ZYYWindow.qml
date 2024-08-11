@@ -17,7 +17,9 @@ Window {
     color: "transparent"
     property color bgColor
     flags: Qt.FramelessWindowHint | Qt.Window | Qt.WindowSystemMenuHint |
-           Qt.WindowMaximizeButtonHint | Qt.WindowMinimizeButtonHint            //设置无边框属性                                                 //空白区域被点击了
+           Qt.WindowMaximizeButtonHint | Qt.WindowMinimizeButtonHint            //设置无边框属性
+    signal positionChanged(real _x, real _y)
+
     //圆角边框窗口
     Rectangle{
         anchors.fill: parent
@@ -37,6 +39,7 @@ Window {
             var delta = Qt.point(mouse.x - clickPos.x, mouse.y - clickPos.y)
             window.x += delta.x
             window.y += delta.y
+            window.positionChanged(mouseX,mouseY)
         }
         onClicked: BasicConfig.blankAreaClicked()
     }

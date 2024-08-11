@@ -30,7 +30,20 @@ QtObject{
     // readonly property real leftWScale  : 255/1300                            //左侧宽占比
     readonly property real wScale : Screen.width/1920                           //控件横向缩放级数
     readonly property real hScale : Screen.height/1080                          //控件纵向缩放级数
-    signal blankAreaClicked()
+    property bool playFlagState: true                                           //设置界面颜色选择窗口是否是播放
+    property color finishedLyricsUpColor: "#ee8784"                             //已播放歌词的上渐变颜色
+    property color finishedLyricsDownColor: "#f3b3b1"                           //已播放歌词的下渐变颜色
+    property color finishedLyricsBorderColor: "#ffff91"                         //已播放歌词的边框颜色
+    property color unFinishedLyricsUpColor: "white"                           //未播放歌词的上渐变颜色
+    property color unFinishedLyricsDownColor: "#ddd"                           //未播放歌词的下渐变颜色
+    property color unFinishedLyricsBorderColor: "white"                       //未播放歌词的边框颜色
+    signal blankAreaClicked()                                                   //窗口空白区域被点击
+    signal openLoginPopup()                                                     //打开扫码登录弹窗
+    signal openLoginByOtherMeansPopup()                                         //打开其他方式登录的弹窗
+    signal closeLoginPopup()                                                    //打开扫码登录弹窗
+    signal closeLoginByOtherMeansPopup()                                        //打开其他方式登录的弹窗
+    signal openColorSelectPopup()                                               //打开颜色选择的弹窗
+    signal closeColorSelectPopup()                                              //打开颜色选择的弹窗
     Component.onCompleted: {
         console.log(`===============================================
         当前屏幕分辨率是${Screen.width}x${Screen.height}

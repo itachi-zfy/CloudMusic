@@ -33,5 +33,12 @@
         <file>Src/qml/commonUI/ZYYVipIconItem.qml</file>
         <file>Src/qml/commonUI/ZYYFloderSet.qml</file>
         <file>Src/qml/commonUI/ZZYSlider.qml</file>
+        <file>Src/qml/commonUI/ZYYColorSelector.qml</file>
+        <file>Src/qml/commonUI/ZYYColorAdjustWindow.qml</file>
+        <file>Src/qml/commonUI/ZYYTextRenderPreview.qml</file>
+        <file>Src/qml/commonUI/ZYYSerchBox.qml</file>
+        <file>Src/qml/title/Search.qml</file>
+        <file>Src/qml/title/UserCommonSetting.qml</file>
+        <file>Src/qml/title/MinAndMax.qml</file>
     </qresource>
 </RCC>

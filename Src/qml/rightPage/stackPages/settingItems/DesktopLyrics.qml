@@ -56,7 +56,7 @@ Item{
                     font.family: "黑体"
                     anchors.left: parent.left
                     anchors.top: parent.top
-                    color:"white"
+                    color:"#DDD"
                     height: 25
                 }
                 ZYYComboBox{
@@ -85,6 +85,109 @@ Item{
                 }
             }
         }
+    }
+    //调整排版样式
+    Label{
+        id: adjustLabel
+        text: "调整样式"
+        font.pixelSize: 20
+        font.bold: true
+        font.family: "黑体"
+        color:"#ddd"
+        height: 25
+        anchors.left: row2.left
+        anchors.top: row2.bottom
+        anchors.topMargin: 50
+    }
+    Row{
+        id:row3
+        anchors.top: adjustLabel.bottom
+        anchors.left: adjustLabel.left
+        anchors.topMargin: 20
+        spacing:50
+        Repeater{
+            model: [["单行显示","并排显示"],["横排显示","竖排显示"],["居中","左对齐","右对齐"]]
+            ZYYComboBox{
+                model:modelData
+                width: 150
+                height: 30
+                text: modelData[0]
+            }
+        }
+    }
+    //更改配色方案
+    Label{
+        id: changeColorLabel
+        text: "更改配色方案"
+        font.pixelSize: 20
+        font.bold: true
+        font.family: "黑体"
+        color:"#ddd"
+        height: 25
+        anchors.left: row3.left
+        anchors.top: row3.bottom
+        anchors.topMargin: 50
+    }
+    Row{
+        id:row4
+        anchors.top: changeColorLabel.bottom
+        anchors.left: changeColorLabel.left
+        anchors.right: changeColorLabel.right
+        anchors.topMargin: 20
+        spacing:70
+        ZYYComboBox{
+            model:["自定义","周易红","落日晖","可爱粉","天际蓝","清新绿","活力紫","温柔黄","低调灰"]
+            width: 150
+            height: 30
+            text: "周易红"
+        }
+        Repeater{
+            model: ["已播放","未播放"]
+            ZYYColorSelector{
+                width: 150
+                height: 30
+                text:modelData
+                MouseArea{
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    onEntered: {
+                        cursorShape = Qt.PointingHandCursor
+                    }
+                    onExited: {
+                        cursorShape = Qt.ArrowCursor
+                    }
+                    onClicked: {
+                        BasicConfig.playFlagState = !index
+                        BasicConfig.openColorSelectPopup()
+                    }
+                }
+            }
+        }
+    }
+    //预览
+    Label{
+        id: previewLabel
+        text: "预览"
+        font.pixelSize: 20
+        font.bold: true
+        font.family: "黑体"
+        color:"#ddd"
+        height: 25
+        anchors.left: row4.left
+        anchors.top: row4.bottom
+        anchors.topMargin: 50
+    }
+    //文字渲染窗口大小
+    ZYYTextRenderPreview{
+        anchors.left:row2.left
+        anchors.right: row2.right
+        height: 300
+        radius: 20
+        anchors.top:previewLabel.bottom
+        anchors.topMargin: 10
+        border.width: 1
+        border.color: "#28282e"
+        color: "#1a1a20"
     }
     //分割线
     ZYYSpliteLine{}

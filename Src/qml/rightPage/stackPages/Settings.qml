@@ -30,6 +30,8 @@ Item{
             anchors.topMargin: 25
             height: 25
             spacing: 20
+            readonly property var moduleHeights: [100,400,200,600,300,800,830,800,180,400]  //各个子模块的高度
+
             Repeater{
                 id:selectorRep
                 anchors.fill: parent
@@ -80,6 +82,9 @@ Item{
                         onClicked: {
                             selectorRep.selectedIndex = index
                             // flick.contentY = index*flick.itemHeight + 32*(index-1)//32是title字体大小
+                            let slideTo = 0
+                            for(let i = 0;i<index;i++)slideTo += setingTitleFlow.moduleHeights[i]
+                            flick.contentY = slideTo
                         }
                     }
                 }
@@ -99,12 +104,13 @@ Item{
         }
         //内容部分
         Flickable{
+            id:flick
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.top: cutLine01.bottom
             anchors.bottom: parent.bottom
             anchors.topMargin: 10
-            contentHeight: 4000
+            contentHeight: 4800
             clip: true
             ScrollBar.vertical: ScrollBar{//自定义ScrollView滚动条，不然访问不到
                 id:cusScrollBar
@@ -118,6 +124,16 @@ Item{
                     implicitHeight: 10
                     radius: 4
                     color: "#42424b"
+                }
+            }
+            onContentYChanged: {
+                let modulePos = contentHeight-400
+                for(let i = setingTitleFlow.moduleHeights.length-1;i>0;i--){
+                    modulePos -= setingTitleFlow.moduleHeights[i]
+                    if( contentY > modulePos){
+                        selectorRep.selectedIndex = i
+                        break
+                    }
                 }
             }
             Column{

@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>Src/js/MainEvents.js</file>
+        <file>Src/js/FragmentShaders.js</file>
     </qresource>
 </RCC>

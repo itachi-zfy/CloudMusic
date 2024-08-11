@@ -4,12 +4,12 @@ import "./../basic"
 
 ComboBox{
     id:cbx
-    property int avaHeight : count < 8?count * 40 : 300
+    property int avaHeight : count < 8?count * 40 : 280
     property string text: ""
     property real indicatorRotation: 90
     background: Rectangle{
         anchors.fill: parent
-        radius: 15
+        radius: parent.height/2
         border.width: 1
         border.color: "#28282e"
         color: "#1a1a20"
