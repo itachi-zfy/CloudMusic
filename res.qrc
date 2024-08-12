@@ -54,5 +54,13 @@
         <file>Resources/setting/andriod.png</file>
         <file>Resources/setting/windows.png</file>
         <file>Resources/searchBox/remove.png</file>
+        <file>Resources/leftBar/boke.png</file>
+        <file>Resources/leftBar/datasource.png</file>
+        <file>Resources/leftBar/downLoad.png</file>
+        <file>Resources/leftBar/likeLeft.png</file>
+        <file>Resources/leftBar/likeRight.png</file>
+        <file>Resources/leftBar/recent.png</file>
+        <file>Resources/leftBar/social.png</file>
+        <file>Resources/leftBar/add.png</file>
     </qresource>
 </RCC>
