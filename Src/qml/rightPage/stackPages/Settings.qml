@@ -40,6 +40,7 @@ Item{
                 Item{
                     height: 40
                     width: selectorLabel.implicitWidth
+                    function setLabelColor(color){selectorLabel.color = color}
                     Label{
                         id: selectorLabel
                         text: modelData
@@ -80,8 +81,9 @@ Item{
                             cursorShape = Qt.ArrowCursor
                         }
                         onClicked: {
+                            for(let i = 0;i<selectorRep.count;i++)selectorRep.itemAt(i).setLabelColor("#a1a1a3")
                             selectorRep.selectedIndex = index
-                            // flick.contentY = index*flick.itemHeight + 32*(index-1)//32是title字体大小
+                            parent.setLabelColor("white")
                             let slideTo = 0
                             for(let i = 0;i<index;i++)slideTo += setingTitleFlow.moduleHeights[i]
                             flick.contentY = slideTo
@@ -163,4 +165,5 @@ Item{
             }
         }
     }
+
 }

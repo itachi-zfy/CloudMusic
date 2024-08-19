@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QFontDatabase>
 #include <QDebug>
+#include <QQmlContext>
 
 /**
  * @brief singletonRegist qml文件全局单例注册
@@ -29,6 +30,15 @@ void init(){
     // QStringList families = QFontDatabase().families();
     // for(QString& family: families)qDebug()<<family;
 }
+
+void modelRegist(QQmlApplicationEngine* engine){
+    //qml当中注册QStringList模型
+    QStringList carouselListModel;
+    for(int i = 0;i<6;i++){
+        carouselListModel << QString("/Resources/cherryPick/carouselI%1.png").arg(i+1);
+    }
+    engine->rootContext()->setContextProperty("carouselListModel",QVariant::fromValue(carouselListModel));
+}
 int main(int argc, char *argv[])
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -38,6 +48,7 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
+    modelRegist(&engine);
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {

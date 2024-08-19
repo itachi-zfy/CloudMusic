@@ -8,7 +8,6 @@
         <file>Src/qml/rightPage/TopTitle.qml</file>
         <file>Src/qml/mianPopups/LoginPopup.qml</file>
         <file>Src/qml/mianPopups/LoginByOtherMeansPopup.qml</file>
-        <file>Src/qml/rightPage/stackPages/CherryPick.qml</file>
         <file>Src/qml/rightPage/stackPages/Settings.qml</file>
         <file>Src/qml/rightPage/stackPages/SkinPages.qml</file>
         <file>Src/qml/rightPage/stackPages/skinPages/PendantPage.qml</file>
@@ -41,5 +40,8 @@
         <file>Src/qml/title/UserCommonSetting.qml</file>
         <file>Src/qml/title/MinAndMax.qml</file>
         <file>Src/qml/commonUI/ZYYLeftButton.qml</file>
+        <file>Src/qml/rightPage/stackPages/CloudMusicCherryPick.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/CherryPick.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/CarouselImage.qml</file>
     </qresource>
 </RCC>

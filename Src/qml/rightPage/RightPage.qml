@@ -46,7 +46,7 @@ Item{
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 100
         clip:true
-        initialItem: "/Src/qml/rightPage/stackPages/CherryPick.qml"
+        initialItem: "/Src/qml/rightPage/stackPages/CloudMusicCherryPick.qml"
     }
 
 }
