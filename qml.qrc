@@ -43,5 +43,7 @@
         <file>Src/qml/rightPage/stackPages/CloudMusicCherryPick.qml</file>
         <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/CherryPick.qml</file>
         <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/CarouselImage.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/OfficalSings.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/RecentMusic.qml</file>
     </qresource>
 </RCC>

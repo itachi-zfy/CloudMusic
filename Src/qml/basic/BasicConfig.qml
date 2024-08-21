@@ -34,9 +34,9 @@ QtObject{
     property color finishedLyricsUpColor: "#ee8784"                             //已播放歌词的上渐变颜色
     property color finishedLyricsDownColor: "#f3b3b1"                           //已播放歌词的下渐变颜色
     property color finishedLyricsBorderColor: "#ffff91"                         //已播放歌词的边框颜色
-    property color unFinishedLyricsUpColor: "white"                           //未播放歌词的上渐变颜色
-    property color unFinishedLyricsDownColor: "#ddd"                           //未播放歌词的下渐变颜色
-    property color unFinishedLyricsBorderColor: "white"                       //未播放歌词的边框颜色
+    property color unFinishedLyricsUpColor: "white"                             //未播放歌词的上渐变颜色
+    property color unFinishedLyricsDownColor: "#ddd"                            //未播放歌词的下渐变颜色
+    property color unFinishedLyricsBorderColor: "white"                         //未播放歌词的边框颜色
     signal blankAreaClicked()                                                   //窗口空白区域被点击
     signal openLoginPopup()                                                     //打开扫码登录弹窗
     signal openLoginByOtherMeansPopup()                                         //打开其他方式登录的弹窗
@@ -44,6 +44,8 @@ QtObject{
     signal closeLoginByOtherMeansPopup()                                        //打开其他方式登录的弹窗
     signal openColorSelectPopup()                                               //打开颜色选择的弹窗
     signal closeColorSelectPopup()                                              //打开颜色选择的弹窗
+    signal fullScreen()                                                         //全屏
+    signal normalScreen()                                                       //恢复正常屏幕
     Component.onCompleted: {
         console.log(`===============================================
         当前屏幕分辨率是${Screen.width}x${Screen.height}

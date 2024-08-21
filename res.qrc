@@ -75,5 +75,6 @@
         <file>Resources/cherryPick/officalSing/pic4.png</file>
         <file>Resources/cherryPick/officalSing/pic5.png</file>
         <file>Resources/cherryPick/officalSing/pic6.png</file>
+        <file>Resources/cherryPick/officalSing/play.png</file>
     </qresource>
 </RCC>

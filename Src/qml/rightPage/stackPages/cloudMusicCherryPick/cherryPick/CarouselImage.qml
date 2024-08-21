@@ -5,7 +5,7 @@ import "../../../../commonUI"
 Item{
     anchors.left: parent.left
     anchors.right: parent.right
-    height: 200
+    height: 200*carouselRow.m_scale
     MouseArea{
         anchors.fill: parent
         hoverEnabled: true
