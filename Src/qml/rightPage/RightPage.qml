@@ -1,4 +1,4 @@
-/***************************************************************
+﻿/***************************************************************
 *  @ProjName:   %{CurrentProject:MyCloudMusic}
 *  @FileName:   RightPage.qml
 *  @Author:     zfy1362021@163.com
@@ -16,6 +16,18 @@ import "../basic"
 Item{
     //获取主栈区
     function getStackView(){return mainStackView}
+    //从左边侧边栏直接跳转到主界面
+    Connections{
+        target: BasicConfig
+        function onJumpToMainPage(){
+            mainStackView.push("/Src/qml/rightPage/stackPages/CloudMusicCherryPick.qml")
+            BasicConfig.stackBehaviors.push(()=>{mainStackView.pop()})
+        }
+        function onJumpToPodcastPage(){
+            mainStackView.push("/Src/qml/rightPage/stackPages/Podcast.qml")
+            BasicConfig.stackBehaviors.push(()=>{mainStackView.pop()})
+        }
+    }
     //顶部标题区域
     TopTitle{
         id:titleArea
@@ -34,7 +46,7 @@ Item{
                 }
             }
             //页面切换行为入栈
-            window.stackBehaviors.push(()=>{mainStackView.pop()})
+            BasicConfig.stackBehaviors.push(()=>{mainStackView.pop()})
         }
     }
     //下方主页面栈区

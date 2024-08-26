@@ -45,5 +45,12 @@
         <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/CarouselImage.qml</file>
         <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/OfficalSings.qml</file>
         <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/RecentMusic.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/Template.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/CherryPickAudioBook.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/HotPodcast.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/SongListSquare.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/songSquare/MainTitleIndicator.qml</file>
+        <file>Src/qml/commonUI/ZYYSingRectangle.qml</file>
+        <file>Src/qml/rightPage/stackPages/Podcast.qml</file>
     </qresource>
 </RCC>

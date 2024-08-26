@@ -56,6 +56,7 @@ Item{
             }
         }
     }
+
     //具体头像
     Flickable{
         id:flick

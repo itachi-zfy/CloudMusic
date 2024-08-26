@@ -1,4 +1,4 @@
-/***************************************************************
+﻿/***************************************************************
 *  @ProjName:   %{CurrentProject:MyCloudMusic}
 *  @FileName:   BasicConfig.qml
 *  @Author:     zfy1362021@163.com
@@ -14,9 +14,10 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 QtObject{
+    property var stackBehaviors : []                                            //存储页面栈的行为
     //全局只读属性
-    readonly property real screenWidth: Screen.width
-    readonly property real screenHeight: Screen.height
+    readonly property real screenWidth: Screen.width                            //屏幕宽度
+    readonly property real screenHeight: Screen.height                          //屏幕高度
     readonly property color mainBgColor:"#13131a"                               //界面主背景颜色
     readonly property color leftBgColor:"#1a1a21"                               //左侧背景颜色
     readonly property color bordColor:"#2b2b31"                                 //矩形边框颜色
@@ -46,6 +47,8 @@ QtObject{
     signal closeColorSelectPopup()                                              //打开颜色选择的弹窗
     signal fullScreen()                                                         //全屏
     signal normalScreen()                                                       //恢复正常屏幕
+    signal jumpToMainPage()                                                     //跳转至主页
+    signal jumpToPodcastPage()                                                  //跳转至播客
     Component.onCompleted: {
         console.log(`===============================================
         当前屏幕分辨率是${Screen.width}x${Screen.height}

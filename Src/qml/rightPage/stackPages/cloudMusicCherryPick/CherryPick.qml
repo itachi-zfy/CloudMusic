@@ -5,8 +5,9 @@ import "../../../commonUI"
 import "./cherryPick"
 Flickable{
     id:flick
-    contentHeight: 2800
+    contentHeight: 2200
     clip: true
+    objectName: "CherryPick"
     ScrollBar.vertical: ScrollBar{//自定义ScrollView滚动条，不然访问不到
         id:cusScrollBar
         anchors.right: parent.right
@@ -24,6 +25,7 @@ Flickable{
     Column{
         anchors.fill: parent
         anchors.topMargin: 30
+        clip: true
         spacing: 30
         //轮播图
         CarouselImage{}
@@ -33,6 +35,12 @@ Flickable{
 
         //最新音乐
         RecentMusic{}
+
+        //精选有声书
+        CherryPickAudioBook{}
+
+        //热门播客
+        HotPodcast{}
     }
 }
 

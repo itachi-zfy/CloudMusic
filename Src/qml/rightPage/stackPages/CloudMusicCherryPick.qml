@@ -71,11 +71,18 @@ Item{
                             for(let i = 0;i<selectorRep.count;i++)selectorRep.itemAt(i).setLabelColor("#a1a1a3")
                             selectorRep.selectedIndex = index
                             parent.setLabelColor("white")
+                            if(index === 0 && cloudMusicChrryPickStackView.currentItem.objectName !== "CherryPick"){
+                                cloudMusicChrryPickStackView.push("/Src/qml/rightPage/stackPages/cloudMusicCherryPick/CherryPick.qml")
+                            }else if(index === 1 && cloudMusicChrryPickStackView.currentItem.objectName !== "SongListSquare"){
+                                cloudMusicChrryPickStackView.push("/Src/qml/rightPage/stackPages/cloudMusicCherryPick/SongListSquare.qml")
+                            }
+                            BasicConfig.stackBehaviors.push(()=>{cloudMusicChrryPickStackView.pop()})
                         }
                     }
                 }
             }
         }
+
         //下方主页面栈区
         StackView{
             id:cloudMusicChrryPickStackView
@@ -83,10 +90,17 @@ Item{
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: 100
             anchors.leftMargin: -window.width * (36 * BasicConfig.wScale / 1317)
             clip:true
+            anchors.topMargin: 20
             initialItem: "/Src/qml/rightPage/stackPages/cloudMusicCherryPick/CherryPick.qml"
+            onCurrentItemChanged: {
+                if(currentItem.objectName === "CherryPick"){
+                    selectorRep.selectedIndex = 0
+                }else if(currentItem.objectName === "SongListSquare"){
+                    selectorRep.selectedIndex = 1
+                }
+            }
         }
 
     }

@@ -13,7 +13,6 @@ ZYYWindow {
     visible: true
     title: "ZYYCloudMusic"
     bgColor: BasicConfig.mainBgColor
-    property var stackBehaviors : []                                                //存储页面栈的行为
     //处理全局信号事件
     Connections{
         id:globalEventDeal

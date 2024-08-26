@@ -47,7 +47,7 @@ Item{
                                 }
                             }
                             //存储栈行为
-                            window.stackBehaviors.push(()=>{skinStackView.pop()})
+                            BasicConfig.stackBehaviors.push(()=>{skinStackView.pop()})
                         }
                     }
                 }

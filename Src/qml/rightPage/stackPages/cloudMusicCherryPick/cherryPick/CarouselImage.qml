@@ -6,6 +6,7 @@ Item{
     anchors.left: parent.left
     anchors.right: parent.right
     height: 200*carouselRow.m_scale
+    clip:true
     MouseArea{
         anchors.fill: parent
         hoverEnabled: true

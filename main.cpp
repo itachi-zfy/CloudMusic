@@ -38,6 +38,12 @@ void modelRegist(QQmlApplicationEngine* engine){
         carouselListModel << QString("/Resources/cherryPick/carouselI%1.png").arg(i+1);
     }
     engine->rootContext()->setContextProperty("carouselListModel",QVariant::fromValue(carouselListModel));
+    //歌单广场模型
+    QStringList singSquareListModel;
+
+    singSquareListModel<<"你是否也喜欢" << "你的专属歌单" << "优质歌单甄选" << "新音乐发现" << "这些歌单，正合你意";
+
+    engine->rootContext()->setContextProperty("singSquareListModel",QVariant::fromValue(singSquareListModel));
 }
 int main(int argc, char *argv[])
 {

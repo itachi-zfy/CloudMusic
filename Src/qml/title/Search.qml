@@ -27,21 +27,21 @@ Row{
                 anchors.fill: parent
                 hoverEnabled: true
                 onExited: {
-                    if(window.stackBehaviors.length){
+                    if(BasicConfig.stackBehaviors.length){
                         backForwardRect.color = "transparent"
                         backForwardRect.layer.enabled = false
                     }
                 }
                 onEntered: {
-                    if(window.stackBehaviors.length){
+                    if(BasicConfig.stackBehaviors.length){
                         backForwardRect.color = BasicConfig.leftBgColor
                         backForwardRect.layer.enabled = true
                     }
                 }
                 onClicked:{
-                    if(window.stackBehaviors.length){
-                        window.stackBehaviors.pop()()
-                        console.log(`页面返回上一级，当前行为栈深度：${window.stackBehaviors.length}`)
+                    if(BasicConfig.stackBehaviors.length){
+                        BasicConfig.stackBehaviors.pop()()
+                        console.log(`页面返回上一级，当前行为栈深度：${BasicConfig.stackBehaviors.length}`)
                     }
                 }
             }

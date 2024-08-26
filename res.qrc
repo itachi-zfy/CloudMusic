@@ -76,5 +76,67 @@
         <file>Resources/cherryPick/officalSing/pic5.png</file>
         <file>Resources/cherryPick/officalSing/pic6.png</file>
         <file>Resources/cherryPick/officalSing/play.png</file>
+        <file>Resources/cherryPick/recentMusic/pic1.png</file>
+        <file>Resources/cherryPick/recentMusic/pic2.png</file>
+        <file>Resources/cherryPick/recentMusic/pic3.png</file>
+        <file>Resources/cherryPick/recentMusic/pic4.png</file>
+        <file>Resources/cherryPick/recentMusic/pic5.png</file>
+        <file>Resources/cherryPick/recentMusic/pic6.png</file>
+        <file>Resources/cherryPick/recentMusic/pic7.png</file>
+        <file>Resources/cherryPick/recentMusic/pic8.png</file>
+        <file>Resources/cherryPick/recentMusic/pic9.png</file>
+        <file>Resources/cherryPick/recentMusic/pic10.png</file>
+        <file>Resources/cherryPick/recentMusic/pic11.png</file>
+        <file>Resources/cherryPick/recentMusic/pic12.png</file>
+        <file>Resources/cherryPick/recentMusic/play.png</file>
+        <file>Resources/cherryPick/recentMusic/download.png</file>
+        <file>Resources/cherryPick/recentMusic/like.png</file>
+        <file>Resources/cherryPick/recentMusic/more.png</file>
+        <file>Resources/cherryPick/audiobook/pic1.png</file>
+        <file>Resources/cherryPick/audiobook/pic2.png</file>
+        <file>Resources/cherryPick/audiobook/pic3.png</file>
+        <file>Resources/cherryPick/audiobook/pic4.png</file>
+        <file>Resources/cherryPick/audiobook/pic5.png</file>
+        <file>Resources/cherryPick/audiobook/pic6.png</file>
+        <file>Resources/cherryPick/audiobook/pic7.png</file>
+        <file>Resources/cherryPick/audiobook/pic8.png</file>
+        <file>Resources/cherryPick/audiobook/pic9.png</file>
+        <file>Resources/cherryPick/audiobook/pic10.png</file>
+        <file>Resources/cherryPick/audiobook/pic11.png</file>
+        <file>Resources/cherryPick/audiobook/pic12.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic1.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic2.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic3.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic4.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic5.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic6.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic7.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic8.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic9.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic10.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic11.png</file>
+        <file>Resources/cherryPick/hotPodcast/pic12.png</file>
+        <file>Resources/cherryPick/singListSquare/pic0_0.png</file>
+        <file>Resources/cherryPick/singListSquare/pic0_1.png</file>
+        <file>Resources/cherryPick/singListSquare/pic0_2.png</file>
+        <file>Resources/cherryPick/singListSquare/pic0_3.png</file>
+        <file>Resources/cherryPick/singListSquare/pic0_4.png</file>
+        <file>Resources/cherryPick/singListSquare/pic0_5.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic0.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic1.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic2.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic3.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic4.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic5.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic6.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic7.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic8.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic9.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic10.png</file>
+        <file>Resources/podcast/topLeftRectArea/pic11.png</file>
+        <file>Resources/podcast/topMiddleRectArea/pic0.png</file>
+        <file>Resources/podcast/topMiddleRectArea/pic1.png</file>
+        <file>Resources/podcast/topMiddleRectArea/pic2.png</file>
+        <file>Resources/podcast/topMiddleRectArea/pic3.png</file>
     </qresource>
 </RCC>
