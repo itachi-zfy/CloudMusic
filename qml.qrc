@@ -52,5 +52,8 @@
         <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/songSquare/MainTitleIndicator.qml</file>
         <file>Src/qml/commonUI/ZYYSingRectangle.qml</file>
         <file>Src/qml/rightPage/stackPages/Podcast.qml</file>
+        <file>Src/qml/rightPage/stackPages/podcast/TopArea.qml</file>
+        <file>Src/qml/rightPage/stackPages/podcast/TopFilter.qml</file>
+        <file>Src/qml/rightPage/stackPages/podcast/GuessYouLike.qml</file>
     </qresource>
 </RCC>

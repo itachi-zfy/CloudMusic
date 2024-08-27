@@ -138,5 +138,21 @@
         <file>Resources/podcast/topMiddleRectArea/pic1.png</file>
         <file>Resources/podcast/topMiddleRectArea/pic2.png</file>
         <file>Resources/podcast/topMiddleRectArea/pic3.png</file>
+        <file>Resources/podcast/topRightRectArea/pic0.png</file>
+        <file>Resources/podcast/topRightRectArea/pic1.png</file>
+        <file>Resources/podcast/topRightRectArea/pic2.png</file>
+        <file>Resources/podcast/topRightRectArea/pic3.png</file>
+        <file>Resources/podcast/guessYouLike/pic0.png</file>
+        <file>Resources/podcast/guessYouLike/pic1.png</file>
+        <file>Resources/podcast/guessYouLike/pic2.png</file>
+        <file>Resources/podcast/guessYouLike/pic3.png</file>
+        <file>Resources/podcast/guessYouLike/pic4.png</file>
+        <file>Resources/podcast/guessYouLike/pic5.png</file>
+        <file>Resources/podcast/guessYouLike/pic6.png</file>
+        <file>Resources/podcast/guessYouLike/pic7.png</file>
+        <file>Resources/podcast/guessYouLike/pic8.png</file>
+        <file>Resources/podcast/guessYouLike/pic9.png</file>
+        <file>Resources/podcast/guessYouLike/pic10.png</file>
+        <file>Resources/podcast/guessYouLike/pic11.png</file>
     </qresource>
 </RCC>
