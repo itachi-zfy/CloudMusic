@@ -1,4 +1,4 @@
-/***************************************************************
+﻿/***************************************************************
 *  @ProjName:   %{CurrentProject:MyCloudMusic}
 *  @FileName:   TopTitle.qml
 *  @Author:     zfy1362021@163.com
@@ -12,6 +12,8 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
+// import Qt5Compat.GraphicalEffects
+
 import "../basic"
 import "../commonUI"
 import "../title"

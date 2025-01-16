@@ -1,5 +1,5 @@
-const reserved = []
-let posChangeArr = []
+﻿const reserved = []
+const posChangeArr = []
 const moveOffset = 100
 //颜色调整窗口位置移动事件
 function colorAdjustMoveEvent(mouseX,mouseY){

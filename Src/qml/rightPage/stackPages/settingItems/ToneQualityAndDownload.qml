@@ -1,4 +1,4 @@
-import QtQuick 2.15
+﻿import QtQuick 2.15
 import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Dialogs 1.3
@@ -140,12 +140,8 @@ Item {
                 height: 14
                 anchors.verticalCenter: maxMemoryLabel.verticalCenter
             }
-            Label{
-                text: "1G"
-                font.pixelSize: 20
-                color:"#ddd"
-                font.family: BasicConfig.commFont
-            }
+
+
             //清除缓存
             Rectangle{
                 id:clearMemoryRect
@@ -177,6 +173,7 @@ Item {
                     }
                 }
             }
+
         }
         //音乐命名格式和文件智能分类
         Column{

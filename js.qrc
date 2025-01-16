@@ -3,5 +3,6 @@
         <file>Src/js/MainEvents.js</file>
         <file>Src/js/FragmentShaders.js</file>
         <file>Src/js/SingListSquareEvents.js</file>
+        <file>Src/js/TheChartsFunctions.js</file>
     </qresource>
 </RCC>

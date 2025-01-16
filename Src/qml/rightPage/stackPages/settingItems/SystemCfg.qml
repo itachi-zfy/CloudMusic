@@ -1,4 +1,4 @@
-import QtQuick 2.15
+﻿import QtQuick 2.15
 import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 import "../../../basic"
@@ -101,6 +101,7 @@ Item {
     }
     //单选按钮互斥组
     ExclusiveGroup {id:closePanExclusiveGroup}
+    // ActionGroup {id:closePanExclusiveGroup}
 
     //关闭主面板
     Row{

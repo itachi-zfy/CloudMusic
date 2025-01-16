@@ -1,5 +1,6 @@
-import QtQuick 2.15
+﻿import QtQuick 2.15
 import QtQuick.Controls 2.15
+// import Qt5Compat.GraphicalEffects
 import QtGraphicalEffects 1.15
 import "../basic"
 import "../commonUI"
@@ -64,7 +65,7 @@ Popup{
                 ctx.lineTo(1,180);
                 ctx.lineTo(1,100);
                 ctx.moveTo(100, 1);
-                ctx.fillStyle = "#1b1b23";
+                ctx.fillStyle = "#";
                 ctx.fill();
             }
         }
@@ -461,6 +462,7 @@ Popup{
                         }
                     }
                 }
+
             }
         }
         //登录按键

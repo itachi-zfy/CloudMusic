@@ -1,4 +1,4 @@
-import QtQuick 2.15
+﻿import QtQuick 2.15
 import QtQuick.Controls 2.15
 import "../../../../basic"
 import "../../../../commonUI"
@@ -113,6 +113,7 @@ Item{
             anchors.right: parent.right
             height: 160*carouselRow.m_scale
             model: carouselModel//1.59 2.33
+            enabled: false
             property real m_scale: (carouselRow.width/950-1) * 0.4 + 1
             delegate:  Rectangle{
                 width: 460*carouselRow.m_scale
@@ -261,7 +262,7 @@ Item{
                 anchors.verticalCenter: parent.verticalCenter
                 Component.onCompleted: parent.posArray.push(x)
             }
-            SequentialAnimation{
+              SequentialAnimation{
                 id:carouselIndicatorAnimtion
                 alwaysRunToEnd: true
                 property bool reserveFlag: false

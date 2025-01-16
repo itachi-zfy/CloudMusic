@@ -27,6 +27,26 @@ Item{
             mainStackView.push("/Src/qml/rightPage/stackPages/Podcast.qml")
             BasicConfig.stackBehaviors.push(()=>{mainStackView.pop()})
         }
+        function onJumpToCommunityPage(){
+            mainStackView.push("/Src/qml/rightPage/stackPages/Community.qml")
+            BasicConfig.stackBehaviors.push(()=>{mainStackView.pop()})
+        }
+        function onJumpToLikePage(){
+            mainStackView.push("/Src/qml/rightPage/stackPages/Like.qml")
+            BasicConfig.stackBehaviors.push(()=>{mainStackView.pop()})
+        }
+        function onJumpToRecentPage(){
+            mainStackView.push("/Src/qml/rightPage/stackPages/Recent.qml")
+            BasicConfig.stackBehaviors.push(()=>{mainStackView.pop()})
+        }
+        function onJumpToDownLoadPage(){
+            mainStackView.push("/Src/qml/rightPage/stackPages/DownloadManager.qml")
+            BasicConfig.stackBehaviors.push(()=>{mainStackView.pop()})
+        }
+        function onJumpToLocalMusicPage(){
+            mainStackView.push("/Src/qml/rightPage/stackPages/LocalMusic.qml")
+            BasicConfig.stackBehaviors.push(()=>{mainStackView.pop()})
+        }
     }
     //顶部标题区域
     TopTitle{

@@ -1,6 +1,8 @@
-import QtQuick 2.15
+﻿import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
+// import Qt5Compat.GraphicalEffects
+
 import "./../basic"
 import "./../commonUI"
 Row{
@@ -40,7 +42,12 @@ Row{
                 }
                 onClicked:{
                     if(BasicConfig.stackBehaviors.length){
+                        if(BasicConfig.stackBehaviorsAdded){
+                            BasicConfig.stackBehaviorsIndexs.pop()
+                            BasicConfig.stackBehaviorsAdded = false
+                        }
                         BasicConfig.stackBehaviors.pop()()
+                        if(BasicConfig.stackBehaviors.length===0)BasicConfig.stackBehaviorsIndexs.unshift(0)
                         console.log(`页面返回上一级，当前行为栈深度：${BasicConfig.stackBehaviors.length}`)
                     }
                 }
@@ -64,8 +71,8 @@ Row{
         id:searchTextField
         z:window.z + 1
         height: backForwardItem.height
-        width: 240 * BasicConfig.wScale
-        leftPadding:40 * BasicConfig.wScale
+        width: 240 //* BasicConfig.wScale
+        leftPadding:40 //* BasicConfig.wScale
     }
     ListModel{
         id:searchSingModel
@@ -106,7 +113,7 @@ Row{
     Popup{
         id:searchPop
         width:searchRow.implicitWidth
-        height: 800
+        height: 600
         x:0
         y:searchTextField.height + 10
         background: Rectangle{
@@ -181,7 +188,7 @@ Row{
                             anchors.right: parent.right
                             anchors.topMargin: 20
                             anchors.leftMargin: 30
-                            spacing: 20
+                            spacing: 20 * BasicConfig.wScale
                             Repeater{
                                 id:historyRep
                                 anchors.fill: parent
@@ -189,19 +196,19 @@ Row{
                                 property bool showAll: false
                                 Rectangle{
                                     width: dataLabel.implicitWidth + 20
-                                    height: 40
+                                    height: 40 * BasicConfig.hScale
                                     border.width: 1
                                     border.color: "#45454e"
                                     color: "#2d2d37"
                                     opacity: index?0.8:1
-                                    radius: 15
+                                    radius: 15 * BasicConfig.hScale
                                     visible: index < (historyRep.showAll?10:7)
                                     Label{
                                         property string contentText: singName === undefined ? "":(historyRep.showAll?(index === 9 ? ">":singName):(index === 6 ? ">":singName))
                                         id:dataLabel
                                         text: undefined ===  contentText? "":contentText
                                         rotation: historyRep.showAll?(index === 9 ? -90 :0):(index === 6 ? 90 :0)
-                                        font.pixelSize: 20
+                                        font.pixelSize: 20 * BasicConfig.hScale
                                         anchors.centerIn:parent
                                         color:"#ddd"
                                         font.family:"微软雅黑 Light"

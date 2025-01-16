@@ -1,4 +1,4 @@
-import QtQuick 2.15
+﻿import QtQuick 2.15
 import QtQuick.Controls 2.15
 import "./../basic"
 
@@ -7,6 +7,7 @@ ComboBox{
     property int avaHeight : count < 8?count * 40 : 280
     property string text: ""
     property real indicatorRotation: 90
+    leftPadding: 10
     background: Rectangle{
         anchors.fill: parent
         radius: parent.height/2
@@ -40,7 +41,6 @@ ComboBox{
     }
     contentItem: Text {
         text: cbx.text
-        leftPadding: 10
         color: "white"
         font.pixelSize: 16
         font.family: BasicConfig.commFont
@@ -78,9 +78,9 @@ ComboBox{
                     Text {
                         color:"#d6d6d8"
                         text: modelData
-                        leftPadding: 10
                         font.pixelSize: 16
                         anchors.left: parent.left
+                        anchors.leftMargin: 10
                         anchors.verticalCenter: parent.verticalCenter
                         font.family:  BasicConfig.commFont
                     }

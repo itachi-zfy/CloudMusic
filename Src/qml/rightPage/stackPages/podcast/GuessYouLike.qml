@@ -30,6 +30,27 @@ Item{
                 Image{
                     anchors.fill: parent
                     source: `/Resources/podcast/guessYouLike/pic${index}.png`
+                    MouseArea{
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        onEntered: {
+                            playImg.visible = true
+                            cursorShape = Qt.PointingHandCursor
+                        }
+                        onExited: {
+                            playImg.visible = false
+                            cursorShape = Qt.ArrowCursor
+                        }
+                    }
+                    Image{
+                        id:playImg
+                        source: "/Resources/cherryPick/officalSing/play.png"
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        anchors.bottomMargin: 80
+                        anchors.rightMargin: 20
+                        visible: false
+                    }
                 }
             }
         }

@@ -1,4 +1,4 @@
-/***************************************************************
+﻿/***************************************************************
 
 *  @ProjName:   %{CurrentProject:MyCloudMusic}
 *  @FileName:   LoginPopup.qml
@@ -12,6 +12,7 @@
 ****************************************************************/
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+// import Qt5Compat.GraphicalEffects
 import QtGraphicalEffects 1.15
 import "../basic"
 Popup{
@@ -133,6 +134,7 @@ Popup{
             anchors.horizontalCenter: parent.horizontalCenter
             text: "选择其他方式登录 >"
             font.pixelSize: 20
+            font.family: BasicConfig.commFont
             MouseArea{
                 anchors.fill: parent
                 hoverEnabled: true

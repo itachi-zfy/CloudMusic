@@ -1,6 +1,8 @@
-import QtQuick 2.15
+﻿import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
+// import Qt5Compat.GraphicalEffects
+
 import "./../basic"
 import "./../commonUI"
 
@@ -99,12 +101,14 @@ Row{
                     window.x = (BasicConfig.screenWidth - window.width)/2
                     window.y = (BasicConfig.screenHeight - window.height)/2
                     BasicConfig.normalScreen()
+                    BasicConfig.isFullScreen = false
                 }else{
                     window.x = 0
                     window.y = 0
                     window.width = BasicConfig.screenWidth-1
                     window.height = BasicConfig.screenHeight-1
                     BasicConfig.fullScreen()
+                    BasicConfig.isFullScreen = true
                 }
             }
         }

@@ -1,11 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="79ae9b88-6b04-4e73-9652-3a98f31b4f03" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/singers/pic8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/cherryPick/pic0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/cherryPick/pic1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/cherryPick/pic2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/cherryPick/pic3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/global/pic0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/global/pic1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/global/pic2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/global/pic3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/global/pic4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/global/pic5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/language/pic0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/language/pic1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/language/pic2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/language/pic3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/language/pic4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/language/pic5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/language/pic6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/officalList/pic0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/officalList/pic1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/officalList/pic2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/officalList/pic3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/singStyle/pic0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/singStyle/pic1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/singStyle/pic2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/singStyle/pic3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/singStyle/pic4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/singStyle/pic5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/singStyle/pic6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/singStyle/pic7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/singStyle/pic8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/special/pic0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/special/pic1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/special/pic2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/special/pic3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/special/pic4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/theCharts/special/pic5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/vip/topImg/pic0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/cherryPick/vip/topImg/pic1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/community/pic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/community/publish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/like/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/like/empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/like/likeImg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/like/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/local/refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/bigRecord.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/comment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/fenxiang.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/fullScreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/like.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/playList.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/pre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/recycle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/smallRecord.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/stylus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/together.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/volumn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/playMusic/whale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic0_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic0_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic0_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic0_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic0_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic0_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic1_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic1_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic1_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic1_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic1_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic1_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic2_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic2_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic2_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic2_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic2_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic2_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic3_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic3_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic3_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic3_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic3_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/podcast/cover/pic3_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/recent/collect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/recent/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/recent/empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/js/TheChartsFunctions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/commonUI/ZYYTitleIndicator.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/commonUI/ZYYUnderLineIndicator.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/commonUI/ZZYPlaySlider.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/playMusic/MusicPage.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/playMusic/MusicPageBottom.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/playMusic/PlayMusic.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/Community.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/DownloadManager.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/Like.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/LocalMusic.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/Recent.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/Singers.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/TheCharts.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/Vip.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/singer/SingerImages.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/singer/TitletIndecator.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/theCharts/ListRecommendation.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/theCharts/OfficalList.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/theCharts/OtherLists.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/vip/TopImg.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/podcast/CoverEct.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyCloudMusic.pro" beforeDir="false" afterPath="$PROJECT_DIR$/MyCloudMusic.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/js/MainEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/Src/js/MainEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/basic/BasicConfig.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/basic/BasicConfig.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/commonUI/ZYYColorAdjustWindow.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/commonUI/ZYYColorAdjustWindow.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/commonUI/ZYYComboBox.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/commonUI/ZYYComboBox.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/commonUI/ZYYLeftButton.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/commonUI/ZYYLeftButton.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/commonUI/ZYYRadioButton.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/commonUI/ZYYRadioButton.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/commonUI/ZYYSerchBox.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/commonUI/ZYYSerchBox.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/commonUI/ZYYTextRenderPreview.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/commonUI/ZYYTextRenderPreview.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/leftPage/LeftPage.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/leftPage/LeftPage.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/mianPopups/LoginByOtherMeansPopup.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/mianPopups/LoginByOtherMeansPopup.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/mianPopups/LoginPopup.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/mianPopups/LoginPopup.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/RightPage.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/RightPage.qml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/TopTitle.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/TopTitle.qml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/SkinPages.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/SkinPages.qml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/skinPages/PendantPage.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/skinPages/PendantPage.qml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/skinPages/SkinPage.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/skinPages/SkinPage.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/CloudMusicCherryPick.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/CloudMusicCherryPick.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/Podcast.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/Podcast.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/CherryPick.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/CherryPick.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/SongListSquare.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/SongListSquare.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/CarouselImage.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/CarouselImage.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/Template.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/cloudMusicCherryPick/cherryPick/Template.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/podcast/GuessYouLike.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/podcast/GuessYouLike.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/settingItems/SystemCfg.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/settingItems/SystemCfg.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/settingItems/ToneQualityAndDownload.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/rightPage/stackPages/settingItems/ToneQualityAndDownload.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/title/MinAndMax.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/title/MinAndMax.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/title/Search.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/title/Search.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/qml/title/UserCommonSetting.qml" beforeDir="false" afterPath="$PROJECT_DIR$/Src/qml/title/UserCommonSetting.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/js.qrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.qml" beforeDir="false" afterPath="$PROJECT_DIR$/main.qml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qml.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/qml.qrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/res.qrc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +184,10 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -49,7 +210,13 @@
       <updated>1722816182461</updated>
       <workItem from="1722816183554" duration="1000" />
       <workItem from="1722902499713" duration="3000" />
+      <workItem from="1736991420358" duration="609000" />
+      <workItem from="1736992144836" duration="9000" />
+      <workItem from="1736992199035" duration="1501000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

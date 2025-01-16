@@ -1,4 +1,4 @@
-import QtQuick 2.15
+﻿import QtQuick 2.15
 import QtQuick.Dialogs 1.3
 import Qt.labs.platform 1.1
 import QtQuick.Controls 2.15
@@ -82,7 +82,6 @@ Rectangle {
                 font.family: "幼圆"
                 font.pixelSize: titleLabel.font.pixelSize + 1
                 layer.enabled: true
-                // This item should be used as the 'mask'
                 layer.samplerName: "maskSource"
                 layer.effect: ShaderEffect {
                     property var colorSource: gradientFinishedBorderRect
@@ -112,7 +111,6 @@ Rectangle {
                 font.family: "幼圆"
                 font.pixelSize: 64
                 layer.enabled: true
-                // This item should be used as the 'mask'
                 layer.samplerName: "maskSource"
                 layer.effect: ShaderEffect {
                     property var colorSource: gradientFinishedContentRect

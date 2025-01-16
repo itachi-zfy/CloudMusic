@@ -1,6 +1,7 @@
 ﻿import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
+// import Qt5Compat.GraphicalEffects
 import "../basic"
 import "../commonUI"
 import "../title"
@@ -77,6 +78,8 @@ Rectangle{
                                 BasicConfig.jumpToMainPage()
                             }else if(index === 1){
                                 BasicConfig.jumpToPodcastPage()
+                            }else if(index === 2){
+                                BasicConfig.jumpToCommunityPage()
                             }
                         }
                     }
@@ -138,6 +141,15 @@ Rectangle{
                                 likeRep.itemAt(i).isSelected = false
                             }
                             parent.isSelected = true
+                            if(index === 0){
+                                BasicConfig.jumpToLikePage()
+                            }else if(index === 1){
+                                BasicConfig.jumpToRecentPage()
+                            }else if(index === 2){
+                                BasicConfig.jumpToDownLoadPage()
+                            }else if(index === 3){
+                                BasicConfig.jumpToLocalMusicPage()
+                            }
                         }
                     }
                 }

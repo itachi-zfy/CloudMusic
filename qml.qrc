@@ -55,5 +55,26 @@
         <file>Src/qml/rightPage/stackPages/podcast/TopArea.qml</file>
         <file>Src/qml/rightPage/stackPages/podcast/TopFilter.qml</file>
         <file>Src/qml/rightPage/stackPages/podcast/GuessYouLike.qml</file>
+        <file>Src/qml/rightPage/stackPages/podcast/CoverEct.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/TheCharts.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/theCharts/ListRecommendation.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/theCharts/OfficalList.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/theCharts/OtherLists.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/Singers.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/singer/TitletIndecator.qml</file>
+        <file>Src/qml/commonUI/ZYYTitleIndicator.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/singer/SingerImages.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/Vip.qml</file>
+        <file>Src/qml/rightPage/stackPages/cloudMusicCherryPick/vip/TopImg.qml</file>
+        <file>Src/qml/rightPage/stackPages/Community.qml</file>
+        <file>Src/qml/rightPage/stackPages/Like.qml</file>
+        <file>Src/qml/commonUI/ZYYUnderLineIndicator.qml</file>
+        <file>Src/qml/rightPage/stackPages/Recent.qml</file>
+        <file>Src/qml/rightPage/stackPages/DownloadManager.qml</file>
+        <file>Src/qml/rightPage/stackPages/LocalMusic.qml</file>
+        <file>Src/qml/playMusic/PlayMusic.qml</file>
+        <file>Src/qml/commonUI/ZZYPlaySlider.qml</file>
+        <file>Src/qml/playMusic/MusicPage.qml</file>
+        <file>Src/qml/playMusic/MusicPageBottom.qml</file>
     </qresource>
 </RCC>

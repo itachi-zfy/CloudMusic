@@ -1,4 +1,4 @@
-import QtQuick 2.15
+﻿import QtQuick 2.15
 import QtQuick.Controls 2.15
 import "../../../../basic"
 import "../../../../commonUI"
@@ -11,6 +11,7 @@ Item {
     property list<Component> components
     required property int type                  //0表示最新音乐，1表示精选有声书，2表示热门播客
     required property string titleText
+    property bool showAniState: true
     Connections{
         target:BasicConfig
         function onFullScreen(){
@@ -28,13 +29,13 @@ Item {
         anchors.fill: parent
         hoverEnabled: true
         onEntered: {
-            leftIniImg.visible = true
-            rigtIniImg.visible = true
+            leftIniImg.visible = recentMusicRoot.showAniState
+            rigtIniImg.visible = recentMusicRoot.showAniState
             cursorShape = Qt.PointingHandCursor
         }
         onExited: {
-            leftIniImg.visible = false
-            rigtIniImg.visible = false
+            leftIniImg.visible = recentMusicRoot.showAniState
+            rigtIniImg.visible = recentMusicRoot.showAniState
             cursorShape = Qt.ArrowCursor
         }
     }
@@ -69,13 +70,13 @@ Item {
                 anchors.fill: parent
                 hoverEnabled: true
                 onEntered: {
-                    leftIniImg.visible = true
-                    rigtIniImg.visible = true
+                    leftIniImg.visible = recentMusicRoot.showAniState
+                    rigtIniImg.visible = recentMusicRoot.showAniState
                     cursorShape = Qt.PointingHandCursor
                 }
                 onExited: {
-                    leftIniImg.visible = false
-                    rigtIniImg.visible = false
+                    leftIniImg.visible = recentMusicRoot.showAniState
+                    rigtIniImg.visible = recentMusicRoot.showAniState
                     cursorShape = Qt.ArrowCursor
                 }
                 onClicked: {
@@ -96,13 +97,13 @@ Item {
                 anchors.fill: parent
                 hoverEnabled: true
                 onEntered: {
-                    leftIniImg.visible = true
-                    rigtIniImg.visible = true
+                    leftIniImg.visible = recentMusicRoot.showAniState
+                    rigtIniImg.visible = recentMusicRoot.showAniState
                     cursorShape = Qt.PointingHandCursor
                 }
                 onExited: {
-                    leftIniImg.visible = false
-                    rigtIniImg.visible = false
+                    leftIniImg.visible = recentMusicRoot.showAniState
+                    rigtIniImg.visible = recentMusicRoot.showAniState
                     cursorShape = Qt.ArrowCursor
                 }
                 onClicked: {

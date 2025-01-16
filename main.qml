@@ -1,10 +1,11 @@
-import QtQuick 2.12
+﻿import QtQuick 2.12
 import QtQuick.Window 2.12
 import "./Src/qml/basic"
 import "./Src/qml/leftPage"
-import "./Src/qml/rightPage"
-import "./Src/qml/mianPopups"
 import "./Src/qml/commonUI"
+import "./Src/qml/rightPage"
+import "./Src/qml/playMusic"
+import "./Src/qml/mianPopups"
 import "./Src/js/MainEvents.js" as MainEvents
 ZYYWindow {
     id:window
@@ -43,18 +44,24 @@ ZYYWindow {
         anchors.centerIn: parent
     }
 
-    //颜色选择弹窗
+
+    //可拖动颜色选择弹窗
     ZYYColorAdjustWindow{
         id:colorAdjustWindow
         MouseArea{
             anchors.top:parent.top
             anchors.left: parent.left
             anchors.right: parent.right
-            height: 50
-            anchors.rightMargin: 100
+            height: 50 * BasicConfig.hScale
+            anchors.rightMargin: 100 * BasicConfig.wScale
+            property point clickedPos: "0,0"
+            onPressed: clickedPos = Qt.point(mouse.x, mouse.y)
             onPositionChanged: {
-                let point = mapToItem(positionMapItem,mouseX,mouseY)
-                MainEvents.colorAdjustMoveEvent(point.x,point.y)
+                // MainEvents.colorAdjustMoveEvent(mouseX,mouseY)
+                var delta = Qt.point(mouse.x - clickedPos.x, mouse.y - clickedPos.y)
+                colorAdjustWindow.x += delta.x
+                colorAdjustWindow.y += delta.y
+                // window.positionChanged(mouseX,mouseY)
             }
         }
     }
@@ -76,4 +83,15 @@ ZYYWindow {
         anchors.top: parent.top
         anchors.bottom: parent.bottom
     }
+    //底部
+    PlayMusic{
+        onOpenMusicPage:{
+            musicPage.y = 0
+        }
+    }
+    //音乐界面
+    MusicPage{
+        id:musicPage
+    }
+
 }

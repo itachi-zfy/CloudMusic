@@ -1,4 +1,4 @@
-#include <QApplication>
+﻿#include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QFontDatabase>
 #include <QDebug>
@@ -28,7 +28,7 @@ void init(){
     QCoreApplication::setOrganizationName("Some organization");
     //查看系统当中的字体
     // QStringList families = QFontDatabase().families();
-    // for(QString& family: families)qDebug()<<family;
+    // for(const QString& family: families)qDebug()<<family;
 }
 
 void modelRegist(QQmlApplicationEngine* engine){
